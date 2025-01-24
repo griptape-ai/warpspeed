@@ -1,5 +1,6 @@
 import pytest
 import schema
+from pydantic import create_model
 
 from griptape.artifacts.image_artifact import ImageArtifact
 from griptape.artifacts.list_artifact import ListArtifact
@@ -245,17 +246,27 @@ class TestPromptTask:
         assert len(task.subtasks) == 2
 
     @pytest.mark.parametrize("structured_output_strategy", ["native", "rule"])
-    def test_parse_output(self, structured_output_strategy):
+    @pytest.mark.parametrize(
+        ("output_schema", "output"),
+        [
+            (schema.Schema({"foo": str}), {"foo": "bar"}),
+            (create_model("Test", foo=(str, ...)), create_model("Test", foo=(str, ...))(foo="bar")),
+        ],
+    )
+    def test_parse_output_schema(self, structured_output_strategy, output_schema, output):
         task = PromptTask(
             input="foo",
             prompt_driver=MockPromptDriver(
                 structured_output_strategy=structured_output_strategy,
                 mock_structured_output={"foo": "bar"},
             ),
-            output_schema=schema.Schema({"foo": str}),
+            output_schema=output_schema,
         )
 
         task.run()
 
         assert task.output is not None
-        assert task.output.value == {"foo": "bar"}
+        if isinstance(output, dict):
+            assert task.output.value == output
+        else:
+            assert task.output.value.dict() == output.dict()

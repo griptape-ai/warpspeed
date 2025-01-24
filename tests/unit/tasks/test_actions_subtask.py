@@ -1,6 +1,8 @@
 import json
 
 import pytest
+import schema
+from pydantic import create_model
 
 from griptape.artifacts import ActionArtifact, ListArtifact, TextArtifact
 from griptape.artifacts.error_artifact import ErrorArtifact
@@ -257,9 +259,14 @@ class TestActionsSubtask:
         with pytest.raises(Exception, match="ActionSubtask has no origin task."):
             assert ActionsSubtask("test").origin_task
 
-    def test_structured_output_tool(self):
-        import schema
-
+    @pytest.mark.parametrize(
+        "output_schema",
+        [
+            schema.Schema({"test": str}),
+            create_model("TestModel", test=(str, ...)),
+        ],
+    )
+    def test_structured_output_tool(self, output_schema):
         from griptape.tools.structured_output.tool import StructuredOutputTool
 
         actions = ListArtifact(
@@ -275,16 +282,21 @@ class TestActionsSubtask:
             ]
         )
 
-        task = ToolkitTask(tools=[StructuredOutputTool(output_schema=schema.Schema({"test": str}))])
+        task = ToolkitTask(tools=[StructuredOutputTool(output_schema=output_schema)])
         Agent().add_task(task)
         subtask = task.add_subtask(ActionsSubtask(actions))
 
         assert isinstance(subtask.output, JsonArtifact)
         assert subtask.output.value == {"test": "value"}
 
-    def test_structured_output_tool_multiple(self):
-        import schema
-
+    @pytest.mark.parametrize(
+        "output_schemas",
+        [
+            (schema.Schema({"test1": str}), schema.Schema({"test2": str})),
+            (create_model("TestModel1", test1=(str, ...)), create_model("TestModel2", test2=(str, ...))),
+        ],
+    )
+    def test_structured_output_tool_multiple(self, output_schemas):
         from griptape.tools.structured_output.tool import StructuredOutputTool
 
         actions = ListArtifact(
@@ -310,8 +322,8 @@ class TestActionsSubtask:
 
         task = ToolkitTask(
             tools=[
-                StructuredOutputTool(name="StructuredOutputTool1", output_schema=schema.Schema({"test": str})),
-                StructuredOutputTool(name="StructuredOutputTool2", output_schema=schema.Schema({"test": str})),
+                StructuredOutputTool(name="StructuredOutputTool1", output_schema=output_schemas[0]),
+                StructuredOutputTool(name="StructuredOutputTool2", output_schema=output_schemas[1]),
             ]
         )
         Agent().add_task(task)

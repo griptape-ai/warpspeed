@@ -6,13 +6,14 @@ from collections import OrderedDict
 from typing import Any, Callable, Optional, cast
 
 import schema
+from pydantic import BaseModel
 from schema import Schema
 
 CONFIG_SCHEMA = Schema(
     {
         schema.Optional("name"): str,
         "description": str,
-        schema.Optional("schema"): lambda data: isinstance(data, (Schema, Callable)),
+        schema.Optional("schema"): lambda data: isinstance(data, (Schema, Callable)) or type(data) is BaseModel,
     }
 )
 
