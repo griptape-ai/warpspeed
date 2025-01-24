@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added `DateTime.get_relative_datetime` to `DateTimeTool.denylist`. May be removed in a future release.
 - Changed log level of `ActionsSubtask` errors from `EXCEPTION` to `DEBUG`.
+- `GriptapeCloudStructureRunDriver` now publishes its events to the global event bus.
 
 ### Deprecated
 
