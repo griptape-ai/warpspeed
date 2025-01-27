@@ -37,6 +37,9 @@ class Message(BaseMessage):
     def get_content_type(self, content_type: type[T]) -> list[T]:
         return [content for content in self.content if isinstance(content, content_type)]
 
+    def exclude_content_type(self, content_type: type[T] | tuple[type[T]]) -> list[BaseMessageContent]:
+        return [content for content in self.content if not isinstance(content, content_type)]
+
     def is_text(self) -> bool:
         return all(isinstance(content, TextMessageContent) for content in self.content)
 

@@ -10,6 +10,7 @@ from attrs import define, field
 
 from griptape import utils
 from griptape.artifacts import ActionArtifact, BaseArtifact, ErrorArtifact, JsonArtifact, ListArtifact, TextArtifact
+from griptape.artifacts.audio_artifact import AudioArtifact
 from griptape.common import ToolAction
 from griptape.configs import Defaults
 from griptape.events import EventBus, FinishActionsSubtaskEvent, StartActionsSubtaskEvent
@@ -210,8 +211,8 @@ class ActionsSubtask(BaseTask[Union[ListArtifact, ErrorArtifact]]):
     def _process_task_input(
         self,
         task_input: Union[str, tuple, list, BaseArtifact, Callable[[BaseTask], BaseArtifact]],
-    ) -> Union[TextArtifact, ListArtifact]:
-        if isinstance(task_input, (TextArtifact, ListArtifact)):
+    ) -> Union[AudioArtifact, TextArtifact, ListArtifact]:
+        if isinstance(task_input, (AudioArtifact, TextArtifact, ListArtifact)):
             return task_input
         elif isinstance(task_input, ActionArtifact):
             return ListArtifact([task_input])
@@ -266,7 +267,7 @@ class ActionsSubtask(BaseTask[Union[ListArtifact, ErrorArtifact]]):
                 self.thought = thoughts[0]
         else:
             if self.output is None:
-                self.output = TextArtifact(artifacts.to_text())
+                self.output = artifacts
 
     def __parse_actions(self, actions_matches: list[str]) -> list[ToolAction]:
         if len(actions_matches) == 0:
