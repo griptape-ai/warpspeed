@@ -5,7 +5,6 @@ import logging
 import re
 from typing import TYPE_CHECKING, Callable, Optional, Union
 
-import schema
 from attrs import define, field
 
 from griptape import utils
@@ -334,8 +333,8 @@ class ActionsSubtask(BaseTask[Union[ListArtifact, ErrorArtifact]]):
                     raise Exception("Activity not found.")
 
                 if activity_schema is not None and action.input is not None:
-                    activity_schema.validate(action.input)
-        except schema.SchemaError as e:
+                    action.tool.validate_activity_schema(activity_schema, action.input)
+        except ValueError as e:
             logger.debug("Subtask %s\nInvalid action JSON: %s", self.origin_task.id, e)
 
             action.output = ErrorArtifact(f"Activity input JSON validation error: {e}", exception=e)

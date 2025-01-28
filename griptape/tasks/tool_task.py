@@ -63,7 +63,11 @@ class ToolTask(PromptTask, ActionsSubtaskOriginMixin):
     def actions_schema(self) -> Schema:
         return self._actions_schema_for_tools([self.tool])
 
-    def try_run(self) -> ListArtifact | TextArtifact | ErrorArtifact:
+    # TODO: Return type should be BaseArtifact since Tools can return any type of artifact.
+    # Unfortunately, this requires the PromptTask (parent class) to return a BaseArtifact which is too unbounded.
+    def try_run(
+        self,
+    ) -> TextArtifact | ErrorArtifact:
         result = self.prompt_driver.run(self.prompt_stack)
 
         if self.prompt_driver.use_native_tools:

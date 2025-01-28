@@ -1,4 +1,6 @@
 import pytest
+from pydantic import create_model
+from schema import Schema
 
 from griptape.artifacts import ActionArtifact, GenericArtifact, ImageArtifact, ListArtifact, TextArtifact
 from griptape.artifacts.error_artifact import ErrorArtifact
@@ -99,7 +101,6 @@ class TestPromptStack:
 
     def test_add_user_message(self, prompt_stack):
         prompt_stack.add_user_message("foo")
-
         assert prompt_stack.messages[0].role == "user"
         assert prompt_stack.messages[0].content[0].artifact.value == "foo"
 
@@ -114,3 +115,42 @@ class TestPromptStack:
 
         assert prompt_stack.messages[0].role == "user"
         assert prompt_stack.messages[0].content[0].artifact.value == "foo"
+
+    @pytest.mark.parametrize(
+        ("output_schema", "expected"),
+        [
+            (
+                Schema({"foo": str}),
+                {
+                    "$id": "foo",
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {"foo": {"type": "string"}},
+                    "additionalProperties": False,
+                    "required": ["foo"],
+                },
+            ),
+            (
+                create_model("OutputSchema", foo=(str, ...)),
+                {
+                    "$id": "foo",
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "additionalProperties": False,
+                    "properties": {"foo": {"title": "Foo", "type": "string"}},
+                    "required": ["foo"],
+                    "title": "OutputSchema",
+                    "type": "object",
+                },
+            ),
+            (None, ValueError),
+        ],
+    )
+    def test_to_output_json_schema(self, prompt_stack, output_schema, expected):
+        prompt_stack.output_schema = output_schema
+
+        if isinstance(expected, type) and issubclass(expected, ValueError):
+            with pytest.raises(ValueError):
+                prompt_stack.to_output_json_schema("foo")
+        else:
+            output_json_schema = prompt_stack.to_output_json_schema("foo")
+            assert output_json_schema == expected

@@ -1,8 +1,10 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, Optional, Union
 
 from attrs import define, field
+from pydantic import ConfigDict
+from schema import Schema
 
 from griptape.artifacts import (
     ActionArtifact,
@@ -24,7 +26,7 @@ from griptape.common import (
 from griptape.mixins.serializable_mixin import SerializableMixin
 
 if TYPE_CHECKING:
-    from schema import Schema
+    from pydantic import BaseModel
 
     from griptape.tools import BaseTool
 
@@ -33,7 +35,7 @@ if TYPE_CHECKING:
 class PromptStack(SerializableMixin):
     messages: list[Message] = field(factory=list, kw_only=True, metadata={"serializable": True})
     tools: list[BaseTool] = field(factory=list, kw_only=True)
-    output_schema: Optional[Schema] = field(default=None, kw_only=True)
+    output_schema: Optional[Union[Schema, type[BaseModel]]] = field(default=None, kw_only=True)
 
     @property
     def system_messages(self) -> list[Message]:
@@ -62,6 +64,22 @@ class PromptStack(SerializableMixin):
 
     def add_assistant_message(self, artifact: str | BaseArtifact) -> Message:
         return self.add_message(artifact, Message.ASSISTANT_ROLE)
+
+    def to_output_json_schema(self, schema_id: str) -> dict:
+        if self.output_schema is None:
+            raise ValueError("Output schema is not set")
+
+        def set_json_schema_extra(schema: dict) -> None:
+            schema["$id"] = schema_id
+            schema["$schema"] = "http://json-schema.org/draft-07/schema#"
+
+        if isinstance(self.output_schema, Schema):
+            json_schema = self.output_schema.json_schema(schema_id)
+        else:
+            self.output_schema.model_config.update(ConfigDict(extra="forbid", json_schema_extra=set_json_schema_extra))
+            json_schema = self.output_schema.model_json_schema()
+
+        return json_schema
 
     @classmethod
     def from_artifact(cls, artifact: BaseArtifact) -> PromptStack:
