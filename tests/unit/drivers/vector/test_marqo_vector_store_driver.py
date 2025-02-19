@@ -117,9 +117,14 @@ class TestMarqoVectorStorageDriver:
         }
         assert result == expected_return_value["items"][0]["_id"]
 
-    def test_query_vector(self, driver):
-        with pytest.raises(NotImplementedError):
-            driver.query_vector([0.0, 0.5])
+    def test_query_vector(self, driver, mock_marqo):
+        results = driver.query_vector([0.1, 0.2, 0.3])
+        mock_marqo.index().search.assert_called()
+        assert len(results) == 1
+        assert results[0].score == 0.6047464
+        assert results[0].meta["Title"] == "Test Title"
+        assert results[0].meta["Description"] == "Test description"
+        assert results[0].id == "5aed93eb-3878-4f12-bc92-0fda01c7d23d"
 
     def test_search(self, driver, mock_marqo):
         results = driver.query("Test query")

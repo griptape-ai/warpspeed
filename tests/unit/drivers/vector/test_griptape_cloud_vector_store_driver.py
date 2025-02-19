@@ -2,6 +2,7 @@ import uuid
 
 import pytest
 
+from griptape.artifacts.text_artifact import TextArtifact
 from griptape.drivers.vector.griptape_cloud import GriptapeCloudVectorStoreDriver
 
 
@@ -73,3 +74,9 @@ class TestGriptapeCloudVectorStoreDriver:
         assert result[1].meta == self.test_metas[1]
         assert result[0].score == self.test_scores[0]
         assert result[1].score == self.test_scores[1]
+
+    def test_query_artifact(self, driver):
+        with pytest.raises(
+            ValueError, match="GriptapeCloudVectorStoreDriver does not support querying with Artifacts."
+        ):
+            driver.query(TextArtifact("some query"))

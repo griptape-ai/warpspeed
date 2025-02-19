@@ -44,7 +44,9 @@ class OpenAiEmbeddingDriver(BaseEmbeddingDriver):
     def client(self) -> openai.OpenAI:
         return openai.OpenAI(api_key=self.api_key, base_url=self.base_url, organization=self.organization)
 
-    def try_embed_chunk(self, chunk: str) -> list[float]:
+    def try_embed_chunk(self, chunk: str | bytes) -> list[float]:
+        if isinstance(chunk, bytes):
+            raise ValueError(f"{self.__class__.__name__} does not support embedding bytes.")
         # Address a performance issue in older ada models
         # https://github.com/openai/openai-python/issues/418#issuecomment-1525939500
         if self.model.endswith("001"):
