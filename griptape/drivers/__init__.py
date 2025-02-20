@@ -14,6 +14,7 @@ from .prompt.google import GooglePromptDriver
 from .prompt.dummy import DummyPromptDriver
 from .prompt.ollama import OllamaPromptDriver
 from .prompt.grok import GrokPromptDriver
+from .prompt.perplexity_sonar import PerplexitySonarPromptDriver
 
 from .memory.conversation import BaseConversationMemoryDriver
 from .memory.conversation.local import LocalConversationMemoryDriver
@@ -141,6 +142,7 @@ __all__ = [
     "DummyPromptDriver",
     "OllamaPromptDriver",
     "GrokPromptDriver",
+    "PerplexitySonarPromptDriver",
     "BaseConversationMemoryDriver",
     "LocalConversationMemoryDriver",
     "AmazonDynamoDbConversationMemoryDriver",
