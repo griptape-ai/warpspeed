@@ -230,3 +230,11 @@ The [GrokPromptDriver](../../reference/griptape/drivers/prompt/grok_prompt_drive
 ```python
 --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_grok.py"
 ```
+
+### Perplexity Sonar
+
+The [PerplexitySonarPromptDriver](../../reference/griptape/drivers/prompt/perplexity_sonar_prompt_driver.md) uses [Perplexity Sonar's chat completion](https://docs.perplexity.ai/api-reference/chat-completions) endpoint.
+
+```python
+--8<-- "docs/griptape-framework/drivers/src/prompt_drivers_perplexity.py"
+```
