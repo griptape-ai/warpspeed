@@ -26,7 +26,9 @@ class AmazonSageMakerJumpstartEmbeddingDriver(BaseEmbeddingDriver):
     def client(self) -> SageMakerClient:
         return self.session.client("sagemaker-runtime")
 
-    def try_embed_chunk(self, chunk: str) -> list[float]:
+    def try_embed_chunk(self, chunk: str | bytes) -> list[float]:
+        if isinstance(chunk, bytes):
+            raise ValueError(f"{self.__class__.__name__} does not support embedding bytes.")
         payload = {"text_inputs": chunk, "mode": "embedding"}
 
         endpoint_response = self.client.invoke_endpoint(

@@ -32,7 +32,9 @@ class HuggingFaceHubEmbeddingDriver(BaseEmbeddingDriver):
             token=self.api_token,
         )
 
-    def try_embed_chunk(self, chunk: str) -> list[float]:
+    def try_embed_chunk(self, chunk: str | bytes) -> list[float]:
+        if isinstance(chunk, bytes):
+            raise ValueError(f"{self.__class__.__name__} does not support embedding bytes.")
         response = self.client.feature_extraction(chunk)
 
         return response.flatten().tolist()

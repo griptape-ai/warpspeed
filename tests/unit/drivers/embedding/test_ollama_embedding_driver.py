@@ -1,3 +1,5 @@
+from contextlib import nullcontext
+
 import pytest
 
 from griptape.drivers.embedding.ollama import OllamaEmbeddingDriver
@@ -15,5 +17,17 @@ class TestOllamaEmbeddingDriver:
     def test_init(self):
         assert OllamaEmbeddingDriver(model="foo")
 
-    def test_try_embed_chunk(self):
-        assert OllamaEmbeddingDriver(model="foo").try_embed_chunk("foobar") == [0, 1, 0]
+    @pytest.mark.parametrize(
+        ("chunk", "expected_output", "expected_error"),
+        [
+            ("foobar", [0, 1, 0], nullcontext()),
+            (
+                b"foobar",
+                [],
+                pytest.raises(ValueError, match="OllamaEmbeddingDriver does not support embedding bytes."),
+            ),
+        ],
+    )
+    def test_try_embed_chunk(self, chunk, expected_output, expected_error):
+        with expected_error:
+            assert OllamaEmbeddingDriver(model="foo").try_embed_chunk(chunk) == expected_output

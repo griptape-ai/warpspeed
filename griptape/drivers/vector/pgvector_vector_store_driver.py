@@ -180,27 +180,6 @@ class PgVectorVectorStoreDriver(BaseVectorStoreDriver):
                 for result in results
             ]
 
-    def query(
-        self,
-        query: str,
-        *,
-        count: Optional[int] = BaseVectorStoreDriver.DEFAULT_QUERY_COUNT,
-        namespace: Optional[str] = None,
-        include_vectors: bool = False,
-        distance_metric: str = "cosine_distance",
-        **kwargs,
-    ) -> list[BaseVectorStoreDriver.Entry]:
-        """Performs a search on the collection to find vectors similar to the provided input vector, optionally filtering to only those that match the provided namespace."""
-        vector = self.embedding_driver.embed_string(query)
-        return self.query_vector(
-            vector,
-            count=count,
-            namespace=namespace,
-            include_vectors=include_vectors,
-            distance_metric=distance_metric,
-            **kwargs,
-        )
-
     def default_vector_model(self) -> Any:
         pgvector_sqlalchemy = import_optional_dependency("pgvector.sqlalchemy")
         sqlalchemy = import_optional_dependency("sqlalchemy")
