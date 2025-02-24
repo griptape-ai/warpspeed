@@ -1,13 +1,16 @@
 from __future__ import annotations
 
+import functools
 import uuid
 from abc import ABC, abstractmethod
 from queue import Queue
 from threading import Thread
-from typing import TYPE_CHECKING, Any, Literal, Optional, Union
+from typing import TYPE_CHECKING, Any, Callable, Literal, Optional, TypeVar, Union
 
 from attrs import Factory, define, field
+from typing_extensions import ParamSpec
 
+from griptape.artifacts import GenericArtifact
 from griptape.common import observable
 from griptape.events import EventBus, FinishStructureRunEvent, StartStructureRunEvent
 from griptape.events.base_event import BaseEvent
@@ -18,6 +21,7 @@ from griptape.memory.structure import ConversationMemory, Run
 from griptape.mixins.rule_mixin import RuleMixin
 from griptape.mixins.runnable_mixin import RunnableMixin
 from griptape.mixins.serializable_mixin import SerializableMixin
+from griptape.tasks import BaseTask
 from griptape.utils.contextvars_utils import with_contextvars
 
 if TYPE_CHECKING:
@@ -25,7 +29,10 @@ if TYPE_CHECKING:
 
     from griptape.artifacts import BaseArtifact
     from griptape.memory.structure import BaseConversationMemory
-    from griptape.tasks import BaseTask
+    from griptape.tasks.code_execution_task import CodeExecutionTask
+
+P = ParamSpec("P")
+T = TypeVar("T")
 
 
 @define
@@ -58,6 +65,32 @@ class Structure(RuleMixin, SerializableMixin, RunnableMixin["Structure"], ABC):
 
     def __add__(self, other: BaseTask | list[BaseTask | list[BaseTask]]) -> list[BaseTask]:
         return self.add_tasks(*other) if isinstance(other, list) else self.add_tasks(other)
+
+    def __enter__(self) -> Structure:
+        return self
+
+    def __exit__(self, type, value, traceback) -> None:  # noqa: ANN001, A002
+        ...
+
+    def task(self, func: Callable[P, T] | Callable[P, T]) -> Callable[P, CodeExecutionTask[GenericArtifact[T]]]:
+        from griptape.tasks import CodeExecutionTask
+
+        @functools.wraps(func)
+        def wrapper(*args: P.args, **kwargs: P.kwargs) -> CodeExecutionTask[GenericArtifact[T]]:
+            def on_run(task: CodeExecutionTask) -> GenericArtifact:
+                response = func(*args, **kwargs)
+
+                return GenericArtifact(response)
+
+            task = CodeExecutionTask(id=func.__name__, on_run=on_run, structure=self)
+            for arg in args:
+                if isinstance(arg, BaseTask):
+                    task.add_parent(arg)
+            self.add_task(task)
+
+            return task
+
+        return wrapper
 
     @property
     def tasks(self) -> list[BaseTask]:
