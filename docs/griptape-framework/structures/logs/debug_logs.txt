@@ -1,0 +1,61 @@
+[02/13/25 21:29:59] INFO     PromptTask 0c8e233e5b9e4e85a9364352764c5890        
+                             Input: Hello world!                                
+                    DEBUG    {                                                  
+                               "model": "gpt-4o",                               
+                               "user": "",                                      
+                               "seed": null,                                    
+                               "modalities": [                                  
+                                 "text"                                         
+                               ],                                               
+                               "temperature": 0.1,                              
+                               "stop": [                                        
+                                 "<|Response|>"                                 
+                               ],                                               
+                               "messages": [                                    
+                                 {                                              
+                                   "role": "user",                              
+                                   "content": "Hello world!"                    
+                                 }                                              
+                               ]                                                
+                             }                                                  
+                    DEBUG    {                                                  
+                               "id": "chatcmpl-B0b4RqME6CuClMOTxdQKUzvYFtUpA",  
+                               "choices": [                                     
+                                 {                                              
+                                   "finish_reason": "stop",                     
+                                   "index": 0,                                  
+                                   "logprobs": null,                            
+                                   "message": {                                 
+                                     "content": "Hello! How can I assist you    
+                             today?",                                           
+                                     "refusal": null,                           
+                                     "role": "assistant",                       
+                                     "audio": null,                             
+                                     "function_call": null,                     
+                                     "tool_calls": null                         
+                                   }                                            
+                                 }                                              
+                               ],                                               
+                               "created": 1739482199,                           
+                               "model": "gpt-4o-2024-08-06",                    
+                               "object": "chat.completion",                     
+                               "service_tier": "default",                       
+                               "system_fingerprint": "fp_50cad350e4",           
+                               "usage": {                                       
+                                 "completion_tokens": 9,                        
+                                 "prompt_tokens": 10,                           
+                                 "total_tokens": 19,                            
+                                 "completion_tokens_details": {                 
+                                   "accepted_prediction_tokens": 0,             
+                                   "audio_tokens": 0,                           
+                                   "reasoning_tokens": 0,                       
+                                   "rejected_prediction_tokens": 0              
+                                 },                                             
+                                 "prompt_tokens_details": {                     
+                                   "audio_tokens": 0,                           
+                                   "cached_tokens": 0                           
+                                 }                                              
+                               }                                                
+                             }                                                  
+                    INFO     PromptTask 0c8e233e5b9e4e85a9364352764c5890        
+                             Output: Hello! How can I assist you today?         

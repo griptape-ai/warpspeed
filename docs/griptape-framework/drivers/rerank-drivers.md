@@ -17,14 +17,28 @@ Rerank Drivers can also be used with a [RagEngine's Rerank Module](../engines/ra
 
 The [LocalRerankDriver](../../reference/griptape/drivers/rerank/local_rerank_driver.md) uses a simple relatedness calculation.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/local_rerank_driver.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/local_rerank_driver.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/local_rerank_driver.txt"
+    ```
+
 
 ### Cohere
 
 The [CohereRerankDriver](../../reference/griptape/drivers/rerank/cohere_rerank_driver.md) uses [Cohere's Rerank](https://cohere.com/rerank) model.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/cohere_rerank_driver.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/cohere_rerank_driver.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/cohere_rerank_driver.txt"
+    ```
+

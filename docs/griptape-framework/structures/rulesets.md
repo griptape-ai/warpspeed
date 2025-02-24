@@ -19,9 +19,16 @@ A [Ruleset](../../reference/griptape/rules/ruleset.md) can be used to define [Ru
     Breaking down your Rules generally helps the LLM follow them more effectively. Additionally, it makes it easier to evaluate the Rule's effectiveness using tools like the [Eval Engine](../engines/eval-engines.md).
     If you have an existing system prompt, consider [overriding the default system prompt](#overriding-system-prompts) instead.
 
-```python
---8<-- "docs/griptape-framework/structures/src/basic_rule.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/basic_rule.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/basic_rule.txt"
+    ```
+
 
 ```
 [09/10/24 14:41:52] INFO     PromptTask b7b23a88ea9e4cd0befb7e7a4ed596b0
@@ -39,9 +46,16 @@ A [Ruleset](../../reference/griptape/rules/ruleset.md) can be used to define [Ru
 [JsonSchemaRule](../../reference/griptape/rules/json_schema_rule.md)s defines a structured format for the LLM's output by providing a JSON schema.
 This is particularly useful when you need the LLM to return well-formed data, such as JSON objects, with specific fields and data types.
 
-```python
---8<-- "docs/griptape-framework/structures/src/json_schema_rule.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/json_schema_rule.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/json_schema_rule.txt"
+    ```
+
 
 ```
 [09/10/24 14:44:53] INFO     PromptTask fb26dd41803443c0b51c3d861626e07a
@@ -57,9 +71,16 @@ Although Griptape leverages the `schema` library, you're free to use any JSON sc
 
 For example, using `pydantic`:
 
-```python
---8<-- "docs/griptape-framework/structures/src/json_schema_rule_pydantic.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/json_schema_rule_pydantic.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/json_schema_rule_pydantic.txt"
+    ```
+
 
 ```
 [09/11/24 09:45:58] INFO     PromptTask eae43f52829c4289a6cca9ee7950e075
@@ -78,9 +99,16 @@ answer='The sentiment of the message is positive.' relevant_emojis=['ðŸ˜Š', 'ðŸ˜
 
 You can define a Ruleset at the Structure level if you need to have certain behaviors across all Tasks.
 
-```python
---8<-- "docs/griptape-framework/structures/src/rulesets_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/rulesets_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/rulesets_1.txt"
+    ```
+
 
 ```
 [09/29/23 13:44:35] INFO     PromptTask 0ecf932b1602493781485de37028f1df
@@ -105,9 +133,16 @@ You can define a Ruleset at the Structure level if you need to have certain beha
 
 You can pass [rules](../../reference/griptape/mixins/rule_mixin.md#griptape.mixins.rule_mixin.RuleMixin.rules) directly to the Structure to have a Ruleset created for you.
 
-```python
---8<-- "docs/griptape-framework/structures/src/rulesets_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/rulesets_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/rulesets_2.txt"
+    ```
+
 
 ```
 [09/29/23 13:31:41] INFO     PromptTask 51c0030b7a854ae5a9bef4595014915c
@@ -127,9 +162,16 @@ You can pass [rules](../../reference/griptape/mixins/rule_mixin.md#griptape.mixi
 
 You can define a Ruleset at the Task level if you need to have different behaviors per Task.
 
-```python
---8<-- "docs/griptape-framework/structures/src/rulesets_3.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/rulesets_3.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/rulesets_3.txt"
+    ```
+
 
 ```
 [09/29/23 13:39:22] INFO     PromptTask 0950581dd35e403c9fc51d246861bfc9
@@ -147,9 +189,16 @@ You can define a Ruleset at the Task level if you need to have different behavio
 
 You can pass [rules](../../reference/griptape/mixins/rule_mixin.md#griptape.mixins.rule_mixin.RuleMixin.rules) directly to the Task to have a Ruleset created for you.
 
-```python
---8<-- "docs/griptape-framework/structures/src/rulesets_4.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/rulesets_4.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/rulesets_4.txt"
+    ```
+
 
 ```
 [09/25/23 16:29:05] INFO     PromptTask d1cc2c0b780d4b32b6309ceab11173f4
@@ -164,13 +213,27 @@ You can pass [rules](../../reference/griptape/mixins/rule_mixin.md#griptape.mixi
 
 While Rulesets are the preferred way to steer LLM output, sometimes you may want to fully override the system prompt.
 
-```python
---8<-- "docs/griptape-framework/structures/src/generate_system_prompt.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/generate_system_prompt.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/generate_system_prompt.txt"
+    ```
+
 
 Note that when overriding the system prompt, it is your responsibility to integrate anything that goes in [by default](https://github.com/griptape-ai/griptape/blob/6b31c129fc19a9ba4bdb205ad9e2a40aef9b121f/griptape/tasks/prompt_task.py?plain=1#L216-L221).
 You can achieve this by appending the default system prompt to your custom prompt like so:
 
-```python
---8<-- "docs/griptape-framework/structures/src/generate_system_prompt_with_rules.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/generate_system_prompt_with_rules.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/generate_system_prompt_with_rules.txt"
+    ```
+

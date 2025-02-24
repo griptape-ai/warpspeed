@@ -1,0 +1,54 @@
+Build, deploy and scale end-to-end solutions, from LLM-powered data prep and retrieval to AI Agents, Pipelines, and Workflows.
+Griptape is an end-to-end AI application stack that enables teams of developers to efficiently build, deploy and manage secure AI applications with predictable output.
+Everything you need.
+Griptape gives developers everything they need, from the development framework to the execution runtime.
+🎢 Griptape
+Framework
+- Build your business logic using predictable, programmable python - don’t gamble on prompting.
+- Turn any developer into an AI developer.
+- Off-Prompt™ gives you better security, performance, and lower costs.
+🌩️ Griptape
+Cloud
+
+Griptape is an end-to-end AI application stack that enables teams of developers to efficiently build, deploy and manage secure AI applications with predictable output.
+Griptape gives developers everything they need, from the open source AI framework (Griptape AI Framework) to the execution runtime (Griptape AI Cloud).
+🎢 Griptape
+AI Framework
+- Build your business logic using predictable, programmable python - don’t gamble on prompting.
+- Turn any developer into an AI developer.
+- Off-Prompt™ gives you better security, performance, and lower costs.
+🌩️ Griptape
+AI Cloud
+- Deploy and run the ETL, RAG, and structures you developed.
+
+Griptape enables developers to build and deploy AI applications 5x faster with more reliable output.
+Griptape is an end-to-end AI application stack that enables teams of developers to efficiently build, deploy and scale secure AI applications with predictable output.
+🛠️ AI Consulting Services
+Design to Proof of Concept in 4 Weeks. Deliver on the promise of AI with the expertise of ex-AWS engineers, supercharged with tech-enabled services through the Griptape AI platform.
+Build, deploy, and manage end-to-end AI applications in the cloud.
+Griptape gives developers everything they need to build, deploy, and manage retrieval-driven AI-powered applications, from the development framework to the execution runtime.
+
+Griptape enables developers to build and deploy AI applications 5x faster with more reliable output.
+Griptape is an end-to-end AI application stack that enables teams of developers to efficiently build, deploy and manage secure AI applications with predictable output.
+Everything you need.
+Griptape gives developers everything they need, from the development framework to the execution runtime.
+🎢 Griptape
+Framework
+- Build your business logic using predictable, programmable python - don’t gamble on prompting.
+- Turn any developer into an AI developer.
+- Off-Prompt™ gives you better security, performance, and lower costs.
+🌩️ Griptape
+Cloud
+
+Griptape enables developers to build and deploy AI applications 5x faster with more reliable output.
+Griptape is an end-to-end AI application stack that enables teams of developers to efficiently build, deploy and manage secure AI applications with predictable output.
+Everything you need.
+Griptape gives developers everything they need, from the development framework to the execution runtime.
+🎢 Griptape
+Framework
+- Build your business logic using predictable, programmable python - don’t gamble on prompting.
+- Turn any developer into an AI developer.
+- Off-Prompt™ gives you better security, performance, and lower costs.
+🌩️ Griptape
+Cloud
+- Deploy and run the ETL, RAG, and structures you developed.

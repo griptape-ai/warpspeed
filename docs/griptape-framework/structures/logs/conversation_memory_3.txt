@@ -1,0 +1,5 @@
+[02/13/25 21:30:01] INFO     PromptTask 9d2c4edb599b4d879c15d9f0d44e7b32        
+                             Input: Hello!                                      
+[02/13/25 21:30:02] INFO     PromptTask 9d2c4edb599b4d879c15d9f0d44e7b32        
+                             Output: Hello! How can I assist you today?         
+{"type": "ConversationMemory", "runs": [{"type": "Run", "id": "3a8e3ee73192495dbb2b00084a52c1e7", "meta": null, "input": {"type": "TextArtifact", "id": "6c8e44e2a8e945f4a78984fb6bc5b15a", "reference": null, "meta": {}, "name": "6c8e44e2a8e945f4a78984fb6bc5b15a", "value": "Hello!"}, "output": {"type": "TextArtifact", "id": "e10906e43835460eae34b9c60724706b", "reference": null, "meta": {"is_react_prompt": false}, "name": "e10906e43835460eae34b9c60724706b", "value": "Hello! How can I assist you today?"}}], "meta": {}, "max_runs": null}

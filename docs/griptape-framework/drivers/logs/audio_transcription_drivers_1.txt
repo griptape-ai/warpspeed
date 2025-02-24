@@ -1,0 +1,39 @@
+[02/13/25 21:32:18] INFO     PromptTask 1e34db7bfccc4a5b895c3e5240693217        
+                             Input: Transcribe the following audio file:        
+                             tests/resources/sentences.wav                      
+[02/13/25 21:32:20] INFO     Subtask ed624f15621a4fb9a3dded4353531aeb           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_zdnID8uknSN5nbHjZGyNSiBs",        
+                                 "name": "AudioTranscriptionTool",              
+                                 "path": "transcribe_audio_from_disk",          
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "path": "tests/resources/sentences.wav"    
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+[02/13/25 21:32:22] INFO     Subtask ed624f15621a4fb9a3dded4353531aeb           
+                             Response: The birch canoe slid on the smooth       
+                             planks. Glued the sheet to the dark blue           
+                             background. It is easy to tell the depth of a well.
+                             These days a chicken leg is a rare dish. Rice is   
+                             often served in round bowls. The juice of lemons   
+                             makes fine punch. The box was thrown beside the    
+                             park truck. The hogs were fed chopped corn and     
+                             garbage. Four hours of steady work faced us. A     
+                             large size in stockings is hard to sell.           
+[02/13/25 21:32:24] INFO     PromptTask 1e34db7bfccc4a5b895c3e5240693217        
+                             Output: The transcription of the audio file is as  
+                             follows:                                           
+                                                                                
+                             "The birch canoe slid on the smooth planks. Glued  
+                             the sheet to the dark blue background. It is easy  
+                             to tell the depth of a well. These days a chicken  
+                             leg is a rare dish. Rice is often served in round  
+                             bowls. The juice of lemons makes fine punch. The   
+                             box was thrown beside the park truck. The hogs were
+                             fed chopped corn and garbage. Four hours of steady 
+                             work faced us. A large size in stockings is hard to
+                             sell."                                             

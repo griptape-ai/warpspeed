@@ -1,0 +1,18 @@
+WebScraperTool.call_c4iZtvdi8TKgPI7MfH0mGaeG (get_content){
+  "values": {
+    "url": "https://griptape.ai"
+  }
+}
+Griptape is a platform designed to help developers build, deploy, and scale end-to-end solutions, particularly those powered by large language models (LLMs). It offers tools for data preparation, retrieval, AI agents, pipelines, and workflows. Griptape provides an open-source AI framework and an execution runtime called Griptape AI Cloud.
+
+Key features include:
+
+- **Build & Secure**: Developers can use predictable, programmable Python to build business logic, turning any developer into an AI developer. The platform emphasizes security, performance, and cost efficiency with its Off-Prompt™ feature.
+
+- **Deploy & Scale**: Griptape allows for the deployment and running of ETL (Extract, Transform, Load), RAG (Retrieval-Augmented Generation), and other structures without the need for infrastructure management. It offers simple API abstractions and seamless scaling.
+
+- **Manage & Monitor**: Users can monitor performance, reliability, and spending directly in Griptape Cloud or integrate with third-party services. It also allows for policy enforcement across users, structures, tasks, and queries.
+
+Griptape AI Framework provides abstractions for building Gen AI Agents, Systems of Agents, Pipelines, Workflows, and RAG implementations without requiring extensive knowledge of Gen AI or Prompt Engineering.
+
+Griptape AI Cloud handles infrastructure management, hosting everything from data processing pipelines to serverless application runtimes. It supports automated data preparation, retrieval as a service, and structure runtime for building AI agents, pipelines, and workflows.

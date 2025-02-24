@@ -1,0 +1,10 @@
+[02/13/25 21:29:57] INFO     PromptTask 67df452f2cbf44f687150f4cb3539e39        
+                             Input: Respond to this question from the user: 'How
+                             do I bake a cake?'                                 
+[02/13/25 21:29:58] INFO     PromptTask 67df452f2cbf44f687150f4cb3539e39        
+                             Output: 🧁➡️🥚🍰🍫➡️⏲️➡️😋                             
+                    INFO     PromptTask 6cc412c5d28841ffb3c5f2bd80193017        
+                             Input: How would you rate your response (1-5)? 1   
+                             being bad, 5 being good. Response: '🧁➡️🥚🍰🍫➡️⏲️➡️😋'
+[02/13/25 21:30:00] INFO     PromptTask 6cc412c5d28841ffb3c5f2bd80193017        
+                             Output: 5️⃣                                          

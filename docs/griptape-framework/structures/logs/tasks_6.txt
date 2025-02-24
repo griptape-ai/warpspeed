@@ -1,0 +1,11 @@
+[02/13/25 21:31:01] INFO     ExtractionTask ec541e533d674c1db6b6796c434fc141    
+                             Input:                                             
+                             Alice, 28, lives in New York.                      
+                             Bob, 35 lives in California.                       
+                             Charlie is 40 and lives in Texas.                  
+                                                                                
+[02/13/25 21:31:02] INFO     ExtractionTask ec541e533d674c1db6b6796c434fc141    
+                             Output: Name,Age,Address                           
+                             Alice,28,lives in New York.                        
+                             Bob,35,lives in California.                        
+                             Charlie,40,lives in Texas.                         

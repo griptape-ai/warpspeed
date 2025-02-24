@@ -4,6 +4,13 @@ The [VectorStoreTool](../../../reference/griptape/tools/vector_store/tool.md) en
 
 Here is an example of how it can be used with a local vector store driver:
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/vector_store_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/vector_store_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/vector_store_tool_1.txt"
+    ```
+

@@ -20,9 +20,16 @@ Pipelines have access to the following [context](../../reference/griptape/struct
 
 ## Pipeline
 
-```python
---8<-- "docs/griptape-framework/structures/src/pipelines_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/pipelines_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/pipelines_1.txt"
+    ```
+
 
 ```
 [09/08/23 10:18:46] INFO     PromptTask b2d35331b8e5455abbb9567d10044001

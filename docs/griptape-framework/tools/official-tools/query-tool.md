@@ -1,8 +1,15 @@
 The [QueryTool](../../../reference/griptape/tools/query/tool.md) enables Agents to query unstructured data for specific information.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/query_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/query_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/query_tool_1.txt"
+    ```
+
 
 ```
 [08/12/24 15:49:23] INFO     PromptTask a88abda2e5324bdf81a3e2b99c26b9df

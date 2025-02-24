@@ -1,0 +1,5 @@
+name,age,location
+Alice,28,New York
+Bob,35,California
+Charlie,40,
+Collin,28,San Francisco

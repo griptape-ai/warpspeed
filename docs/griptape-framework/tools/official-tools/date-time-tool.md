@@ -2,9 +2,16 @@
 
 This tool enables LLMs to get current date and time.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/date_time_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/date_time_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/date_time_tool_1.txt"
+    ```
+
 
 ```
 [09/11/23 15:26:02] INFO     Task d0bf49dacd8849e695494578a333f6cc              

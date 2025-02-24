@@ -1,0 +1,8 @@
+Eval Steps [
+  "Compare the actual output to the expected output to identify any discrepancies in factual information.",
+  "Verify that all key facts and data points in the actual output match those in the expected output.",
+  "Ensure that the actual output does not contain any additional information that contradicts the expected output.",
+  "Check that the actual output maintains the context and meaning intended by the expected output."
+]
+Score: 1.0
+Reason: The actual output 'Glass' matches the expected output 'Glass' perfectly, with no discrepancies or contradictions. The context and meaning are maintained accurately.

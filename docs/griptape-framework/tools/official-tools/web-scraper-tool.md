@@ -2,9 +2,16 @@
 
 This tool enables LLMs to scrape web pages for full text, summaries, authors, titles, and keywords. It can also execute search queries to answer specific questions about the page. This tool uses OpenAI APIs for some of its activities, so in order to use it provide a valid API key in `openai_api_key`.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/web_scraper_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/web_scraper_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/web_scraper_tool_1.txt"
+    ```
+
 
 ```
 [08/12/24 15:32:08] INFO     PromptTask b14a4305365f4b17a4dcf235f84397e2

@@ -1,0 +1,26 @@
+[02/13/25 21:35:17] INFO     PromptTask 53ad0812108a478c8b1f9873fd217af5        
+                             Input: what is Griptape?                           
+[02/13/25 21:35:18] INFO     Subtask bb1eaa9db6ae44948fb78058951ac8d3           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_3XUsTBrHNLjc1vGXN8mRzSpJ",        
+                                 "name": "RagTool",                             
+                                 "path": "search",                              
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "query": "Griptape"                        
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+[02/13/25 21:35:20] INFO     Subtask bb1eaa9db6ae44948fb78058951ac8d3           
+                             Response: Griptape builds AI-powered applications  
+                             that connect securely to your enterprise data and  
+                             APIs. Griptape Agents provide incredible power and 
+                             flexibility when working with large language       
+                             models.                                            
+[02/13/25 21:35:21] INFO     PromptTask 53ad0812108a478c8b1f9873fd217af5        
+                             Output: Griptape builds AI-powered applications    
+                             that securely connect to enterprise data and APIs. 
+                             Griptape Agents offer significant power and        
+                             flexibility for working with large language models.

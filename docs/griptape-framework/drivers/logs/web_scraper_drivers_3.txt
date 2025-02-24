@@ -1,0 +1,225 @@
+[02/13/25 21:31:58] INFO     PromptTask 2706a6927cdf4ac891e99a1be5ff0a5f        
+                             Input: List all email addresses on griptape.ai in a
+                             flat numbered markdown list.                       
+[02/13/25 21:32:00] INFO     Subtask 723a5618b5fd4e96b60bf69690fc1f9f           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_EgtiY2Wbpy7DO3L2hBnGBTEO",        
+                                 "name": "WebScraperTool",                      
+                                 "path": "get_content",                         
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "url": "https://griptape.ai"               
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+[02/13/25 21:32:03] INFO     Subtask 723a5618b5fd4e96b60bf69690fc1f9f           
+                             Response: We value your privacy                    
+                                                                                
+                             This website or its third-party tools process      
+                             personal data. You can opt out of the sale of your 
+                             personal information by clicking on the “Do Not    
+                             Sell or Share My Personal Information” link.       
+                                                                                
+                               Do Not Sell or Share My Personal Information     
+                             Opt-out Preferences                                
+                                                                                
+                             We use third-party cookies that help us analyze how
+                             you use this website, store your preferences, and  
+                             provide the content and advertisements that are    
+                             relevant to you. However, you can opt out of these 
+                             cookies by checking "Do Not Sell or Share My       
+                             Personal Information" and clicking the "Save My    
+                             Preferences" button. Once you opt out, you can opt 
+                             in again at any time by unchecking "Do Not Sell or 
+                             Share My Personal Information" and clicking the    
+                             "Save My Preferences" button.                      
+                                                                                
+                                   Do Not Sell or Share My Personal Information 
+                             Cancel   Save My Preferences    Powered by         
+                                                                                
+                             * Products[AI Framework](/ai-framework)[AI         
+                             Cloud](/cloud)[AI Cloud                            
+                             Pricing](/pricing-griptape-cloud)                  
+                             * [Docs](https://docs.griptape.ai/stable/)         
+                             * How                                              
+                             to[Samples](/sample-applications)[Learn](https://le
+                             arn.griptape.ai/latest/)                           
+                             *                                                  
+                             Resources[Blog](/blog)[Community](https://discord.g
+                             g/griptape)[GitHub](https://github.com/griptape-ai/
+                             griptape)[ComfyUI Nodes](/griptape-comfyui-nodes)  
+                             * [About](/team)                                   
+                             * [Request                                         
+                             Demo](https://calendly.com/griptape-ai/product-over
+                             view-demo?month=2024-12)                           
+                             * [Log In](https://cloud.griptape.ai/)             
+                             * [Start FREE](https://cloud.griptape.ai/account)  
+                                                                                
+                             Build Production Ready AI Agents                   
+                             ================================                   
+                                                                                
+                             Everything You Need to Build Reliable AI Agents    
+                             Quickly and Securely, Using Your Data.Built for the
+                             Enterprise. Deploy Anywhere.                       
+                             ---------------------------------------------------
+                             ---------------------------------------------------
+                             --------------------------                         
+                                                                                
+                             [Start                                             
+                             Building](https://cloud.griptape.ai/account)[GitHub
+                             ](https://github.com/griptape-ai/griptape)         
+                                                                                
+                             Build, Deploy, and Scale End-to-End Solutions, from
+                             LLM-Powered Data Prep and Retrieval to AI Agents,  
+                             Pipelines, and Workflows.                          
+                             ===================================================
+                             ===================================================
+                             =========================                          
+                                                                                
+                             ### Griptape gives developers everything they need,
+                             from the open source AI framework ([Griptape AI    
+                             Framework](/ai-framework)) to the execution runtime
+                             ([Griptape AI Cloud](/cloud)).                     
+                                                                                
+                             ### Build &Secure                                  
+                                                                                
+                             1. Build your business logic using predictable,    
+                             programmable python - don’t gamble on prompting.   
+                             2. Turn any developer into an AI developer.        
+                             3. Off-Prompt™ gives you better security,          
+                             performance, and lower costs.                      
+                             [Get AI                                            
+                             Framework](https://github.com/griptape-ai/griptape)
+                             ### Deploy &Scale                                  
+                                                                                
+                             1. Deploy and run the ETL, RAG, and structures you 
+                             developed.                                         
+                             2. Simple API abstractions.                        
+                             3. Skip the infrastructure management.             
+                             4. Scale seamlessly so you can grow with your      
+                             workload requirements.                             
+                             [Get AI Cloud](/cloud)                             
+                             ### Manage &Monitor                                
+                                                                                
+                             1. Monitor directly in Griptape Cloud or integrate 
+                             with any third-party service.                      
+                             2. Measure performance, reliability, and spending  
+                             across the organization                            
+                             3. Enforce policy for each user, structure, task,  
+                             and query                                          
+                             [Get AI Cloud](/cloud)                             
+                                                                                
+                             Sample Applications Built on Griptape              
+                             =====================================              
+                                                                                
+                             [#### Transform Data with Find and                 
+                             Replace](https://github.com/griptape-ai/griptape-sa
+                             mple-structures/tree/main/griptape_find_replace_tra
+                             nsform)[#### Keep Private Data ‘Off Prompt’ with   
+                             TaskMemory](https://github.com/griptape-ai/griptape
+                             -sample-structures/tree/main/griptape_off_prompt)[#
+                             ### Quickly Switch Models and Model                
+                             Providers](https://github.com/griptape-ai/griptape-
+                             sample-structures/tree/main/griptape_model_switcher
+                             )[More Apps](/sample-applications)                 
+                                                                                
+                             🎢 Griptape AI Framework                           
+                             =======================                            
+                                                                                
+                             ### Griptape provides clean and clear abstractions 
+                             for building Gen AI Agents, Systems of Agents,     
+                             Pipelines, Workflows, and RAG implementations      
+                             without having to spend weeks learning Gen AI nor  
+                             need to ever learn Prompt Engineering.             
+                                                                                
+                             ### Build                                          
+                                                                                
+                             Build ETL pipelines to prep your data for secure   
+                             LLM access.                                        
+                                                                                
+                             ### Compose                                        
+                                                                                
+                             Compose retrieval patterns that give fast,         
+                             accurate, detailed information.                    
+                                                                                
+                             ### Write                                          
+                                                                                
+                             Write agents, pipelines, and workflows (i.e.       
+                             structures) to integrate your business             
+                             logic.[GitHub](https://github.com/griptape-ai/gript
+                             ape)                                               
+                                                                                
+                             🌩️ Griptape AI Cloud                                
+                             ====================                               
+                                                                                
+                             ### Skip the infrastructure management. We’ll host 
+                             and operate everything for you, from the data      
+                             processing pipeline to the retrieval-ready database
+                             to the serverless application runtime. Simple to   
+                             complex, one layer of the stack or the whole       
+                             enchilada, we’ve got you covered.                  
+                                                                                
+                             ### Automated Data Prep(ETL)                       
+                                                                                
+                             Connect any data source and extract. Prep/transform
+                             it (extract, clean, chunk, embed, add metadata).   
+                             Load it into a vector database index.              
+                             ### Retrieval as a Service(RAG)                    
+                                                                                
+                             Generate answers, summaries, and details from your 
+                             own data. Use ready-made retrieval patterns,       
+                             customize them to fit your use case, or compose    
+                             your own from scratch (Modular RAG).               
+                             ### Structure Runtime(RUN)                         
+                                                                                
+                             Build your own AI agents, pipelines, and workflows.
+                             Real-time interfaces, transactional processes,     
+                             batch workloads. Plug them into client             
+                             applications.[Get AI Cloud](/cloud)                
+                                                                                
+                             Learn more...                                      
+                             =============                                      
+                                                                                
+                             [#### New Features in Griptape Framework           
+                             1.3](/blog/new-features-in-griptape-framework-1-3)[
+                             #### Announcing Griptape Framework v1.2 with       
+                             Structured                                         
+                             Output](/blog/announcing-griptape-framework-v1-2-wi
+                             th-structured-output)[#### Getting started with the
+                             Griptape                                           
+                             Framework](/blog/getting-started-with-the-griptape-
+                             framework)[AI Blog](/blog)                         
+                                                                                
+                             Be part of our community.                          
+                             =========================                          
+                                                                                
+                             ### Join our social channels for the latest news,  
+                             tutorials, and exclusive insights.                 
+                                                                                
+                             Our partners                                       
+                             ============                                       
+                                                                                
+                             Resources[Docs](https://docs.griptape.ai/latest/)[L
+                             earning](https://learn.griptape.ai/latest/)[Github]
+                             (https://github.com/griptape-ai/griptape)[Blog](/bl
+                             og)Company[Brand                                   
+                             Guidelines](/brand-guidelines)[Careers](/team)[Crun
+                             chbase](https://www.crunchbase.com/organization/gri
+                             ptape)[AI                                          
+                             Glossary](/ai-glossary)Contact[hello@griptape.ai](m
+                             ailto:hello@griptpae.ai)[press@griptape.ai](mailto:
+                             press@griptpae.ai)[careers@griptape.ai](mailto:care
+                             ers@griptpae.ai)About[Privacy                      
+                             Policy](/privacy-policy)[Terms of                  
+                             Service](/terms-of-service)© Griptape,             
+                             Inc[Sitemap](https://www.griptape.ai/sitemap.xml)  
+[02/13/25 21:32:05] INFO     PromptTask 2706a6927cdf4ac891e99a1be5ff0a5f        
+                             Output: Here are the email addresses found on the  
+                             Griptape.ai website:                               
+                                                                                
+                             1. [hello@griptape.ai](mailto:hello@griptape.ai)   
+                             2. [press@griptape.ai](mailto:press@griptape.ai)   
+                             3.                                                 
+                             [careers@griptape.ai](mailto:careers@griptape.ai)  

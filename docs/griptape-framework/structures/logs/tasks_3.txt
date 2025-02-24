@@ -1,0 +1,12 @@
+[02/13/25 21:29:10] INFO     PromptTask dd75d3f6b1954b66809c36d86efd61bd        
+                             Input: Image, format: jpeg, size: 82351 bytes      
+                                                                                
+                             What's in this image?                              
+[02/13/25 21:29:14] INFO     PromptTask dd75d3f6b1954b66809c36d86efd61bd        
+                             Output: This image depicts a stunning mountain     
+                             landscape at sunrise or sunset. The scene features 
+                             a prominent, snow-capped peak surrounded by other  
+                             mountains. A layer of clouds or mist is settled in 
+                             the valleys, creating a dramatic and serene        
+                             atmosphere. The sky is a mix of warm colors, with  
+                             the sun casting a golden light over the scene.     

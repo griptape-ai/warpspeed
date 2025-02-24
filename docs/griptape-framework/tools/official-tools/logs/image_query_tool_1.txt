@@ -1,0 +1,24 @@
+[02/13/25 21:35:57] INFO     PromptTask f5cbc18909934f6f9090679c3a8183d3        
+                             Input: Describe the weather in the image           
+                             tests/resources/mountain.png in one word.          
+[02/13/25 21:35:59] INFO     Subtask 82d5204aeaef4b0a98724f20f4c6fe6e           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_iFDGXGMlUFf035GA2nh5mnVj",        
+                                 "name": "ImageQueryTool",                      
+                                 "path": "query_image_from_disk",               
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "query": "Describe the weather in the image
+                             in one word.",                                     
+                                     "image_paths": [                           
+                                       "tests/resources/mountain.png"           
+                                     ]                                          
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+[02/13/25 21:36:03] INFO     Subtask 82d5204aeaef4b0a98724f20f4c6fe6e           
+                             Response: Serene                                   
+[02/13/25 21:36:04] INFO     PromptTask f5cbc18909934f6f9090679c3a8183d3        
+                             Output: The weather in the image is serene.        

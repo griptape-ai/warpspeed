@@ -1,0 +1,82 @@
+https://mermaid.ink/svg/Z3JhcGggVEQ7CglIZXJvLS0+IEdlbmVyYXRlX1RpdGxlOwoJU2V0dGluZy0tPiBHZW5lcmF0ZV9UaXRsZTsKCUdlbmVyYXRlX1RpdGxlLS0+IFN0b3J5OwoJU3Rvcnk7
+[02/13/25 21:26:26] INFO     PromptTask hero                                    
+                             Input: Name a fantasy hero (e.g., 'Eldric')        
+                    INFO     PromptTask setting                                 
+                             Input: Describe a mystical setting in a couple     
+                             sentences (e.g., 'the Shattered Isles')            
+[02/13/25 21:26:28] INFO     PromptTask hero                                    
+                             Output: Sure, how about "Thalorin Stormrider"?     
+                    INFO     PromptTask setting                                 
+                             Output: In the heart of the Enchanted Glade,       
+                             ancient trees with luminescent leaves form a canopy
+                             that filters moonlight into a kaleidoscope of      
+                             colors. Ethereal creatures, with wings that shimmer
+                             like liquid silver, flit between the branches,     
+                             while a gentle mist rises from the crystal-clear   
+                             brook that winds through the forest, carrying the  
+                             soft, melodic whispers of forgotten spells.        
+                    INFO     PromptTask story                                   
+                             Input: Write a brief, yet heroic tale about Sure,  
+                             how about "Thalorin Stormrider"? the Flame of In   
+                             the heart of the Enchanted Glade, ancient trees    
+                             with luminescent leaves form a canopy that filters 
+                             moonlight into a kaleidoscope of colors. Ethereal  
+                             creatures, with wings that shimmer like liquid     
+                             silver, flit between the branches, while a gentle  
+                             mist rises from the crystal-clear brook that winds 
+                             through the forest, carrying the soft, melodic     
+                             whispers of forgotten spells..                     
+[02/13/25 21:26:44] INFO     PromptTask story                                   
+                             Output: In the heart of the Enchanted Glade, where 
+                             ancient trees with luminescent leaves formed a     
+                             canopy that filtered moonlight into a kaleidoscope 
+                             of colors, a hero emerged. Thalorin Stormrider,    
+                             known as the Flame of the Glade, stood poised at   
+                             the edge of the crystal-clear brook that wound     
+                             through the forest. Ethereal creatures with wings  
+                             that shimmered like liquid silver flitted between  
+                             the branches, their presence a testament to the    
+                             magic that thrived in this sacred place.           
+                                                                                
+                             Thalorin, with eyes like burning embers and hair   
+                             that crackled with the energy of a storm, was the  
+                             guardian of the Glade. His heart beat in time with 
+                             the whispers of forgotten spells that rose from the
+                             gentle mist, a melody only he could truly hear. The
+                             Glade was under threat from the Shadow King, a dark
+                             sorcerer who sought to extinguish its light and    
+                             harness its power for his own malevolent purposes. 
+                                                                                
+                             As the Shadow King's minions encroached upon the   
+                             Glade, their presence turning the vibrant colors to
+                             shades of gray, Thalorin called upon the ancient   
+                             magic of the forest. Flames danced along his       
+                             fingertips, a fiery testament to his resolve. With 
+                             a voice that echoed like thunder, he summoned the  
+                             storm, the sky above roiling with dark clouds that 
+                             crackled with lightning.                           
+                                                                                
+                             The battle that ensued was fierce and unrelenting. 
+                             Thalorin, the Flame of the Glade, moved with the   
+                             grace of the ethereal creatures that watched from  
+                             above, his every strike a symphony of fire and     
+                             fury. The Shadow King's forces, though numerous,   
+                             were no match for the elemental power that Thalorin
+                             wielded.                                           
+                                                                                
+                             With a final, resounding clap of thunder, Thalorin 
+                             unleashed a torrent of flame that swept through the
+                             ranks of darkness, purging the Glade of their      
+                             presence. The luminescent leaves glowed brighter,  
+                             the brook sang with renewed vigor, and the ethereal
+                             creatures danced in celebration.                   
+                                                                                
+                             The Shadow King, defeated and retreating into the  
+                             shadows from whence he came, left the Glade        
+                             untouched, its magic preserved by the heroism of   
+                             Thalorin Stormrider. As the storm subsided and the 
+                             moonlight returned to its kaleidoscope of colors,  
+                             Thalorin stood amidst the tranquility, a guardian  
+                             whose legend would be whispered in the melodic     
+                             spells of the Enchanted Glade for generations to   
+                             come.                                              

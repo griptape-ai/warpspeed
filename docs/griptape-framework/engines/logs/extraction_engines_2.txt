@@ -1,0 +1,108 @@
+{
+  "model": "GPT-1",
+  "notes": [
+    "Introduced in 2018.",
+    "Considered the first LLM, even though it has only 0.117 billion parameters."
+  ]
+}
+{
+  "model": "GPT-2",
+  "notes": [
+    "Introduced in 2019.",
+    "Caught widespread attention because OpenAI at first deemed it too powerful to release publicly, out of fear of malicious use.",
+    "1.5-billion-parameters model.",
+    "Training cost in 2019 was $50,000."
+  ]
+}
+{
+  "model": "GPT-3",
+  "notes": [
+    "Introduced in 2020.",
+    "Available only via API with no offering of downloading the model to execute locally.",
+    "Legacy BPE tokenizer splits text into numerical tokens.",
+    "Training cost in 2020 was between $80,000 and $1,600,000 for a 1.5-billion-parameter LLM."
+  ]
+}
+{
+  "model": "ChatGPT",
+  "notes": [
+    "Introduced in 2022.",
+    "Consumer-facing browser-based model.",
+    "Captured the imaginations of the general population and caused media hype and online buzz."
+  ]
+}
+{
+  "model": "GPT-4",
+  "notes": [
+    "Introduced in 2023.",
+    "Praised for its increased accuracy and multimodal capabilities.",
+    "OpenAI did not reveal the high-level architecture and the number of parameters.",
+    "Maximum output of 4096 tokens."
+  ]
+}
+{
+  "model": "OpenAI o1",
+  "notes": [
+    "Released in 2024.",
+    "Reasoning model that generates long chains of thought before returning a final answer.",
+    "Achieved 83% accuracy on International Mathematics Olympiad qualifying exam problems."
+  ]
+}
+{
+  "model": "DeepSeek R1",
+  "notes": [
+    "Released in January 2025.",
+    "671-billion-parameter open-weight model.",
+    "Performs comparably to OpenAI o1 but at a much lower cost.",
+    "Training data remains private."
+  ]
+}
+{
+  "model": "BERT",
+  "notes": [
+    "Introduced in 2018.",
+    "Encoder-only model.",
+    "Academic and research usage began to decline in 2023."
+  ]
+}
+{
+  "model": "Mistral 7B and Mixtral 8x7b",
+  "notes": [
+    "Models by Mistral AI.",
+    "Have the more permissive Apache License."
+  ]
+}
+{
+  "model": "DeepSeek-R1",
+  "notes": [
+    "Released in January 2025.",
+    "671-billion-parameter open-weight reasoning model.",
+    "Achieved comparable performance to OpenAI's o1 while being significantly more cost-effective to operate."
+  ]
+}
+{
+  "model": "Gemini 1.5",
+  "notes": [
+    "Presented in February 2024.",
+    "Can have a context window sized up to 1 million tokens."
+  ]
+}
+{
+  "model": "Claude 2.1",
+  "notes": [
+    "Has a context window of up to 200k tokens."
+  ]
+}
+{
+  "model": "GPT-4 Turbo",
+  "notes": [
+    "Has a maximum output of 4096 tokens."
+  ]
+}
+{
+  "model": "Pixtral 12B",
+  "notes": [
+    "Introduced by Mistral in September 2024.",
+    "Multimodal model."
+  ]
+}

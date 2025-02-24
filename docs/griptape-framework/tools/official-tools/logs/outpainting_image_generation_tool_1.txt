@@ -1,0 +1,35 @@
+[02/13/25 21:35:06] INFO     PromptTask 0086b31998d54830bda1a9a61a9ee2b8        
+                             Input: Generate an image of a mountain shrouded by 
+                             clouds by outpainting the image at                 
+                             tests/resources/mountain.png using the mask at     
+                             tests/resources/mountain-mask.png.                 
+[02/13/25 21:35:09] INFO     Subtask baddf807fbfe4c33be28071a7f8b5b1d           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_Atn7JJp1SHM3M9MS5PXCojgf",        
+                                 "name": "OutpaintingImageGenerationTool",      
+                                 "path": "image_outpainting_from_file",         
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "prompt": "A majestic mountain shrouded by 
+                             clouds, with a serene and mystical atmosphere. The 
+                             clouds should appear soft and ethereal, partially  
+                             obscuring the mountain peaks, creating a sense of  
+                             mystery and grandeur.",                            
+                                     "negative_prompt": "Avoid clear skies, no  
+                             bright sunlight, no urban elements.",              
+                                     "image_file":                              
+                             "tests/resources/mountain.png",                    
+                                     "mask_file":                               
+                             "tests/resources/mountain-mask.png"                
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+[02/13/25 21:35:13] INFO     Subtask baddf807fbfe4c33be28071a7f8b5b1d           
+                             Response: Image, format: png, size: 580518 bytes   
+[02/13/25 21:35:14] INFO     PromptTask 0086b31998d54830bda1a9a61a9ee2b8        
+                             Output: The image of a mountain shrouded by clouds 
+                             has been successfully generated. If you need       
+                             further modifications or have any other requests,  
+                             feel free to let me know!                          

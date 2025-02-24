@@ -1,0 +1,8 @@
+[02/13/25 21:33:54] INFO     PromptTask c1230cfceac84fc08462692b400e6d48        
+                             Input: My name is Jeff.                            
+                    INFO     PromptTask c1230cfceac84fc08462692b400e6d48        
+                             Output: Hello, Jeff! How can I assist you today?   
+[02/13/25 21:33:55] INFO     PromptTask c1230cfceac84fc08462692b400e6d48        
+                             Input: What is my name?                            
+[02/13/25 21:33:56] INFO     PromptTask c1230cfceac84fc08462692b400e6d48        
+                             Output: Your name is Jeff.                         

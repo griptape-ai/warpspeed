@@ -2,9 +2,16 @@
 
 This tool enables LLMs to make simple calculations.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/calculator_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/calculator_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/calculator_tool_1.txt"
+    ```
+
 
 ```
 [09/08/23 14:23:51] INFO     Task bbc6002a5e5b4655bb52b6a550a1b2a5              

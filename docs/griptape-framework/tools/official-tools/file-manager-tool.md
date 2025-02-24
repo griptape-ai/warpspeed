@@ -2,9 +2,16 @@
 
 This tool enables LLMs to save and load files.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/file_manager_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/file_manager_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/file_manager_tool_1.txt"
+    ```
+
 
 ```
 [09/12/23 12:07:56] INFO     Task 16a1ce1847284ae3805485bad7d99116              
