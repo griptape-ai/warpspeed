@@ -1,0 +1,23 @@
+[02/13/25 21:33:02] INFO     PromptTask ea869614fd2a4e5ba119c21e980a3647        
+                             Input: How would you categorize this email?        
+                                 <email>                                        
+                                 Can I use my Mixmaster 4000 to mix paint, or is
+                             it only meant for mixing food?                     
+                                 </email>                                       
+                                                                                
+                                 Categories are:                                
+                                 (A) Pre-sale question                          
+                                 (B) Broken or defective item                   
+                                 (C) Billing question                           
+                                 (D) Other (please explain)                     
+[02/13/25 21:33:04] INFO     PromptTask ea869614fd2a4e5ba119c21e980a3647        
+                             Output: I would categorize this email as (A)       
+                             Pre-sale question.                                 
+                                                                                
+                             Explanation: The email is asking about the intended
+                             use of the Mixmaster 4000 product, specifically    
+                             whether it can be used for mixing paint or if it is
+                             only meant for mixing food. This is a question     
+                             someone might ask before deciding to purchase the  
+                             product, hence it falls under the "Pre-sale        
+                             question" category.                                

@@ -1,0 +1,8 @@
+[02/13/25 21:30:16] INFO     PromptTask 9fe536c944374245ac35c81c03dca095        
+                             Input: What is the sentiment of this review?       
+                             Review: "I really enjoyed this movie!"             
+                    INFO     PromptTask 9fe536c944374245ac35c81c03dca095        
+                             Output: The sentiment of the review is positive.   
+                             The customer appears to have enjoyed the movie and 
+                             likely had a pleasant and entertaining experience  
+                             watching it.                                       

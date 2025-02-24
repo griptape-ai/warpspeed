@@ -1,0 +1,12 @@
+[02/13/25 21:28:57] INFO     PromptTask 99a7cc7720f8480ba26546b94b1c506c        
+                             Input: What is the sentiment of this message?: 'I  
+                             am so happy!'                                      
+[02/13/25 21:28:58] INFO     PromptTask 99a7cc7720f8480ba26546b94b1c506c        
+                             Output: {"answer":"The sentiment of the message is 
+                             positive.","relevant_emojis":["str"]}              
+{
+  "answer": "The sentiment of the message is positive.",
+  "relevant_emojis": [
+    "str"
+  ]
+}

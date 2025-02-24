@@ -1,8 +1,15 @@
 The [ExractionTool](../../../reference/griptape/tools/extraction/tool.md) enables LLMs to extract structured text from unstructured data.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/extraction_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/extraction_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/extraction_tool_1.txt"
+    ```
+
 
 ```
 [08/12/24 15:58:03] INFO     PromptTask 43b3d209a83c470d8371b7ef4af175b4

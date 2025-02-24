@@ -1,0 +1,43 @@
+[02/13/25 21:32:26] INFO     PromptTask 8a43ff20fb884b8f8a65f1b022da8765        
+                             Input: Create a list of 8 questions for an         
+                             interview with a science fiction author.           
+[02/13/25 21:32:30] INFO     PromptTask 8a43ff20fb884b8f8a65f1b022da8765        
+                             Output: Certainly! Here are eight questions you    
+                             might consider asking a science fiction author     
+                             during an interview:                               
+                                                                                
+                             1. **What inspired you to start writing science    
+                             fiction, and how did you develop your unique voice 
+                             in the genre?**                                    
+                                                                                
+                             2. **Can you describe your world-building process? 
+                             How do you balance scientific accuracy with        
+                             creative storytelling?**                           
+                                                                                
+                             3. **How do you approach character development in a
+                             genre that often focuses heavily on technology and 
+                             futuristic settings?**                             
+                                                                                
+                             4. **What themes or messages do you aim to explore 
+                             through your work, and how do you hope they        
+                             resonate with your readers?**                      
+                                                                                
+                             5. **How do you see the role of science fiction in 
+                             reflecting or influencing societal issues and      
+                             technological advancements?**                      
+                                                                                
+                             6. **Can you share any challenges you’ve faced in  
+                             writing science fiction, and how you’ve overcome   
+                             them?**                                            
+                                                                                
+                             7. **What are some of your favorite science fiction
+                             books or authors, and how have they influenced your
+                             writing?**                                         
+                                                                                
+                             8. **What advice would you give to aspiring science
+                             fiction writers who are just starting out in the   
+                             genre?**                                           
+                                                                                
+                             These questions are designed to delve into the     
+                             author's creative process, inspirations, and       
+                             perspectives on the genre.                         

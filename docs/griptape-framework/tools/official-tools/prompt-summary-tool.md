@@ -1,8 +1,15 @@
 The [PromptSummaryTool](../../../reference/griptape/tools/prompt_summary/tool.md) enables LLMs summarize text data.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/prompt_summary_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/prompt_summary_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/prompt_summary_tool_1.txt"
+    ```
+
 
 ````
 [08/12/24 15:54:46] INFO     PromptTask 8be73eb542c44418ba880399044c017a

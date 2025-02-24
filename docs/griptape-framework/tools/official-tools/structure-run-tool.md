@@ -3,9 +3,16 @@
 The [StructureRunTool](../../../reference/griptape/tools/structure_run/tool.md) Tool provides a way to run Structures via a Tool.
 It requires you to provide a [Structure Run Driver](../../../griptape-framework/drivers/structure-run-drivers.md) to run the Structure in the desired environment.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/structure_run_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/structure_run_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/structure_run_tool_1.txt"
+    ```
+
 
 ```
 [05/02/24 13:50:03] INFO     PromptTask 4e9458375bda4fbcadb77a94624ed64c

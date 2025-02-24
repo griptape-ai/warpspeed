@@ -1,0 +1,12 @@
+[02/13/25 21:30:11] INFO     PromptTask animal                                  
+                             Input: Name an animal                              
+                    INFO     PromptTask animal                                  
+                             Output: tiger                                      
+                    INFO     PromptTask adjective                               
+                             Input: Describe tiger with an adjective            
+[02/13/25 21:30:12] INFO     PromptTask adjective                               
+                             Output: striped                                    
+                    INFO     PromptTask new-animal                              
+                             Input: Name a striped animal                       
+                    INFO     PromptTask new-animal                              
+                             Output: zebra                                      

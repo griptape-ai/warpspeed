@@ -4,9 +4,16 @@ The [RagTool](../../../reference/griptape/tools/rag/tool.md) enables LLMs to que
 
 Here is an example of how it can be used with a local vector store driver:
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/rag_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/rag_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/rag_tool_1.txt"
+    ```
+
 
 ```
 [07/11/24 13:30:43] INFO     PromptTask a6d057d5c71d4e9cb6863a2adb64b76c

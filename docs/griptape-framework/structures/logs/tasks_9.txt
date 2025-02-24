@@ -1,0 +1,9 @@
+[02/13/25 21:32:08] INFO     RagTask eaa139d210814145b107667080348988           
+                             Input: Respond to the following query: Give me     
+                             information about Griptape                         
+[02/13/25 21:32:10] INFO     RagTask eaa139d210814145b107667080348988           
+                             Output: Griptape builds AI-powered applications    
+                             that connect securely to your enterprise data and  
+                             APIs. Additionally, Griptape Agents provide        
+                             incredible power and flexibility when working with 
+                             large language models.                             

@@ -1,0 +1,7 @@
+[02/13/25 21:34:17] INFO     PromptTask 83dee9b8cbd84392be1c8cb399a1cfcd        
+                             Input: You will be provided with a tweet, and your 
+                             task is to classify its sentiment as positive,     
+                             neutral, or negative. Tweet: I loved the new Batman
+                             movie!                                             
+[02/13/25 21:34:18] INFO     PromptTask 83dee9b8cbd84392be1c8cb399a1cfcd        
+                             Output: Positive                                   

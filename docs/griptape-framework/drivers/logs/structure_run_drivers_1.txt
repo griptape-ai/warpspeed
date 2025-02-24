@@ -1,0 +1,11 @@
+[02/13/25 21:33:36] INFO     PromptTask 29c84087bd0c443985e61714b8d2b2d1        
+                             Input: Tell me a joke                              
+                    INFO     PromptTask 29c84087bd0c443985e61714b8d2b2d1        
+                             Output: Why don't skeletons fight each other? They 
+                             don't have the guts!                               
+                    INFO     PromptTask ed36bec5a6c240939e29a004102bcf11        
+                             Input: Rewrite this joke: Why don't skeletons fight
+                             each other? They don't have the guts!              
+[02/13/25 21:33:37] INFO     PromptTask ed36bec5a6c240939e29a004102bcf11        
+                             Output: What keeps the bony figures from a duel?   
+                             They lack the courage within their hollow hull!    

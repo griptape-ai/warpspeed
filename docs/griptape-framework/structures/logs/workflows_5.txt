@@ -1,0 +1,12 @@
+[02/13/25 21:30:23] INFO     PromptTask animal                                  
+                             Input: Name an animal                              
+[02/13/25 21:30:24] INFO     PromptTask animal                                  
+                             Output: tiger                                      
+                    INFO     PromptTask adjective                               
+                             Input: Describe tiger with an adjective            
+                    INFO     PromptTask adjective                               
+                             Output: fierce                                     
+                    INFO     PromptTask new-animal                              
+                             Input: Name a fierce animal                        
+[02/13/25 21:30:25] INFO     PromptTask new-animal                              
+                             Output: tiger                                      

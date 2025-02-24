@@ -1,0 +1,10 @@
+[02/13/25 21:28:52] INFO     ExtractionTask 8ecae5596ee448e5a9d4542c42d21a34    
+                             Input:                                             
+                             Alice (Age 28) lives in New York.                  
+                             Bob (Age 35) lives in California.                  
+                                                                                
+[02/13/25 21:28:53] INFO     ExtractionTask 8ecae5596ee448e5a9d4542c42d21a34    
+                             Output: {"name": "Alice", "age": 28, "location":   
+                             "New York"}                                        
+                             {"name": "Bob", "age": 35, "location":             
+                             "California"}                                      

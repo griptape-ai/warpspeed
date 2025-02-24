@@ -11,9 +11,16 @@ Eval Engines require either [criteria](../../reference/griptape/engines/eval/eva
 If `criteria` is set, Griptape will generate `evaluation_steps` for you. This is useful for getting started, but you may to explicitly set `evaluation_steps` for more complex evaluations.
 Either `criteria` or `evaluation_steps` must be set, but not both.
 
-```python
---8<-- "docs/griptape-framework/engines/src/eval_engines_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/engines/src/eval_engines_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/engines/logs/eval_engines_1.txt"
+    ```
+
 
 ```
 Eval Steps [

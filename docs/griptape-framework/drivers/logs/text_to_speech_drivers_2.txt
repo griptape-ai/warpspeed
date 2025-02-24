@@ -1,0 +1,21 @@
+[02/13/25 21:33:30] INFO     PromptTask c9ec76504e4d43b2bf2dda51109f690a        
+                             Input: Generate audio from this text: 'Hello,      
+                             world!'                                            
+[02/13/25 21:33:31] INFO     Subtask 9172be9f74cf4ab8b67dab03a8a4a9ef           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_blmYmJzQ1ztQCxj1X2rpSP1c",        
+                                 "name": "TextToSpeechTool",                    
+                                 "path": "text_to_speech",                      
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "text": "Hello, world!"                    
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+[02/13/25 21:33:33] INFO     Subtask 9172be9f74cf4ab8b67dab03a8a4a9ef           
+                             Response: Audio, format: mp3, size: 15360 bytes    
+[02/13/25 21:33:34] INFO     PromptTask c9ec76504e4d43b2bf2dda51109f690a        
+                             Output: The audio for the text "Hello, world!" has 
+                             been generated successfully.                       

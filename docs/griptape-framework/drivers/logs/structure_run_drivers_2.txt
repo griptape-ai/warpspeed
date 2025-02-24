@@ -1,0 +1,7 @@
+[02/13/25 21:32:13] INFO     PromptTask 5910dd7ae93d434f954de4fa64a59544        
+                             Input: Think of a question related to Retrieval    
+                             Augmented Generation.                              
+[02/13/25 21:32:14] INFO     PromptTask 5910dd7ae93d434f954de4fa64a59544        
+                             Output: How does Retrieval Augmented Generation    
+                             improve the accuracy of language models in         
+                             providing contextually relevant information?       

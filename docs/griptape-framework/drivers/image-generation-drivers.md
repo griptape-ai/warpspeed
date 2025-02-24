@@ -9,9 +9,16 @@ search:
 
 Provide a Driver to a [Tool](../tools/index.md) for use by an [Agent](../structures/agents.md):
 
-```python
---8<-- "docs/griptape-framework/drivers/src/image_generation_drivers_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/image_generation_drivers_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/image_generation_drivers_1.txt"
+    ```
+
 
 ## Image Generation Drivers
 
@@ -25,9 +32,16 @@ The [Bedrock Stable Diffusion Model Driver](../../reference/griptape/drivers/ima
 
 This Model Driver supports negative prompts. When provided, the image generation request will include negatively-weighted prompts describing features or characteristics to avoid in the resulting generation.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/image_generation_drivers_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/image_generation_drivers_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/image_generation_drivers_2.txt"
+    ```
+
 
 #### Titan
 
@@ -35,17 +49,31 @@ The [Bedrock Titan Image Generator Model Driver](../../reference/griptape/driver
 
 This Model Driver supports negative prompts. When provided, the image generation request will include negatively-weighted prompts describing features or characteristics to avoid in the resulting generation.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/image_generation_drivers_3.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/image_generation_drivers_3.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/image_generation_drivers_3.txt"
+    ```
+
 
 ### Azure OpenAI
 
 The [Azure OpenAI Image Generation Driver](../../reference/griptape/drivers/image_generation/azure_openai_image_generation_driver.md) provides access to OpenAI models hosted by Azure. In addition to the configurations provided by the underlying OpenAI Driver, the Azure OpenAI Driver allows configuration of Azure-specific deployment values.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/image_generation_drivers_4.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/image_generation_drivers_4.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/image_generation_drivers_4.txt"
+    ```
+
 
 ### Leonardo.Ai
 
@@ -55,9 +83,16 @@ This Driver supports configurations like model selection, image size, specifying
 
 This Driver supports negative prompts. When provided, the image generation request will include negatively-weighted prompts describing features or characteristics to avoid in the resulting generation.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/image_generation_drivers_5.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/image_generation_drivers_5.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/image_generation_drivers_5.txt"
+    ```
+
 
 ### OpenAI
 
@@ -65,9 +100,16 @@ The [OpenAI Image Generation Driver](../../reference/griptape/drivers/image_gene
 
 This Driver supports image generation configurations like style presets, image quality preference, and image size. For details on supported configuration values, see the [OpenAI documentation](https://platform.openai.com/docs/guides/images/introduction).
 
-```python
---8<-- "docs/griptape-framework/drivers/src/image_generation_drivers_6.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/image_generation_drivers_6.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/image_generation_drivers_6.txt"
+    ```
+
 
 ### HuggingFace Pipelines
 

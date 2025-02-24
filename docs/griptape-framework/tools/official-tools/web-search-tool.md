@@ -2,9 +2,16 @@
 
 This tool enables LLMs to search the web.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/web_search_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/web_search_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/web_search_tool_1.txt"
+    ```
+
 
 ```
 [09/08/23 15:37:25] INFO     Task 2cf557f7f7cd4a20a7fa2f0c46af2f71              
@@ -93,6 +100,13 @@ This tool enables LLMs to search the web.
 Extra schema properties can be added to the Tool to allow for more customization if the Driver supports it.
 In this example, we add a `sort` property to the `search` Activity which will be added as a [Google custom search query parameter](https://developers.google.com/custom-search/v1/reference/rest/v1/cse/list).
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/web_search_tool_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/web_search_tool_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/web_search_tool_2.txt"
+    ```
+

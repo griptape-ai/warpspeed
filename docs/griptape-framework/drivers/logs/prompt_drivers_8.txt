@@ -1,0 +1,32 @@
+[02/13/25 21:34:20] INFO     PromptTask 791165505f294f08bde20961e17e5a91        
+                             Input: Briefly explain how a computer works to a   
+                             young child.                                       
+[02/13/25 21:34:23] INFO     PromptTask 791165505f294f08bde20961e17e5a91        
+                             Output: Imagine a computer like a super smart      
+                             friend who can help you do lots of things.         
+                                                                                
+                             Inside the computer, there's a special part called 
+                             the "brain" or "processor." It's like the boss who 
+                             tells the computer what to do.                     
+                                                                                
+                             The computer also has a "memory" like your brain.  
+                             It stores all the information you give it, like    
+                             your favorite games and videos.                    
+                                                                                
+                             When you type or click on something, the computer  
+                             sends a message to the brain. The brain then tells 
+                             the computer what to do, like open a game or show  
+                             you a picture.                                     
+                                                                                
+                             The computer has a "screen" like a TV. It shows you
+                             what the computer is doing, like the game you're   
+                             playing or the website you're visiting.            
+                                                                                
+                             And finally, the computer has a "keyboard" and     
+                             "mouse" that you use to talk to it. You can type   
+                             words or move the mouse to tell the computer what  
+                             you want it to do.                                 
+                                                                                
+                             So, the computer is like a super smart friend who  
+                             helps you do things by using its brain, memory,    
+                             screen, keyboard, and mouse.                       

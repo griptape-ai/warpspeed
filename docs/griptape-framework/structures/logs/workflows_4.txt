@@ -1,0 +1,12 @@
+[02/13/25 21:28:32] INFO     PromptTask animal                                  
+                             Input: Name an animal                              
+                    INFO     PromptTask animal                                  
+                             Output: elephant                                   
+                    INFO     PromptTask adjective                               
+                             Input: Describe elephant with an adjective         
+[02/13/25 21:28:33] INFO     PromptTask adjective                               
+                             Output: large                                      
+                    INFO     PromptTask new-animal                              
+                             Input: Name a large animal                         
+                    INFO     PromptTask new-animal                              
+                             Output: elephant                                   
