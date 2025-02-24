@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "griptape"
-version = "1.3.0"
+version = "1.4.0"
 description = "Modular Python framework for LLM workflows, tools, memory, and data."
 authors = ["Griptape <hello@griptape.ai>"]
 license = "Apache 2.0"
