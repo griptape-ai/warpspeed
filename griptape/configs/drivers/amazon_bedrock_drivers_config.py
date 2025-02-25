@@ -27,22 +27,24 @@ class AmazonBedrockDriversConfig(DriversConfig):
 
     @lazy_property()
     def prompt_driver(self) -> AmazonBedrockPromptDriver:
-        return AmazonBedrockPromptDriver(session=self.session, model="anthropic.claude-3-5-sonnet-20240620-v1:0")
+        return AmazonBedrockPromptDriver(session=self.session, model="anthropic.claude-3-7-sonnet-20250219-v1:0")
 
     @lazy_property()
     def embedding_driver(self) -> AmazonBedrockTitanEmbeddingDriver:
-        return AmazonBedrockTitanEmbeddingDriver(session=self.session, model="amazon.titan-embed-text-v1")
+        return AmazonBedrockTitanEmbeddingDriver(session=self.session, model="amazon.titan-embed-text-v2:0")
 
     @lazy_property()
     def image_generation_driver(self) -> AmazonBedrockImageGenerationDriver:
         return AmazonBedrockImageGenerationDriver(
             session=self.session,
-            model="amazon.titan-image-generator-v1",
+            model="amazon.titan-image-generator-v2:0",
             image_generation_model_driver=BedrockTitanImageGenerationModelDriver(),
         )
 
     @lazy_property()
     def vector_store_driver(self) -> LocalVectorStoreDriver:
         return LocalVectorStoreDriver(
-            embedding_driver=AmazonBedrockTitanEmbeddingDriver(session=self.session, model="amazon.titan-embed-text-v1")
+            embedding_driver=AmazonBedrockTitanEmbeddingDriver(
+                session=self.session, model="amazon.titan-embed-text-v2:0"
+            )
         )
