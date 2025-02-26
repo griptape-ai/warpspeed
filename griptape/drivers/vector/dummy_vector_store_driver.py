@@ -9,6 +9,7 @@ from griptape.drivers.vector import BaseVectorStoreDriver
 from griptape.exceptions import DummyError
 
 if TYPE_CHECKING:
+    from griptape.artifacts import BaseArtifact
     from griptape.drivers.embedding import BaseEmbeddingDriver
 
 
@@ -52,7 +53,7 @@ class DummyVectorStoreDriver(BaseVectorStoreDriver):
 
     def query(
         self,
-        query: str,
+        query: str | BaseArtifact,
         *,
         count: Optional[int] = None,
         namespace: Optional[str] = None,

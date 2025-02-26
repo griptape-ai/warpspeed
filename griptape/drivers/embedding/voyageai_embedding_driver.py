@@ -40,5 +40,7 @@ class VoyageAiEmbeddingDriver(BaseEmbeddingDriver):
     def client(self) -> Any:
         return import_optional_dependency("voyageai").Client(api_key=self.api_key)
 
-    def try_embed_chunk(self, chunk: str) -> list[float]:
+    def try_embed_chunk(self, chunk: str | bytes) -> list[float]:
+        if isinstance(chunk, bytes):
+            raise ValueError(f"{self.__class__.__name__} does not support embedding bytes.")
         return self.client.embed([chunk], model=self.model, input_type=self.input_type).embeddings[0]

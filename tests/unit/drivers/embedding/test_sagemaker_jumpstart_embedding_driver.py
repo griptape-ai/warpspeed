@@ -57,3 +57,15 @@ class TestAmazonSageMakerJumpstartEmbeddingDriver:
                 model="test-model",
                 tokenizer=OpenAiTokenizer(model=OpenAiTokenizer.DEFAULT_OPENAI_GPT_3_CHAT_MODEL),
             ).try_embed_chunk("foobar") == [0, 2, 0]
+
+        with pytest.raises(
+            ValueError, match="AmazonSageMakerJumpstartEmbeddingDriver does not support embedding bytes."
+        ):
+            assert (
+                AmazonSageMakerJumpstartEmbeddingDriver(
+                    endpoint="test-endpoint",
+                    model="test-model",
+                    tokenizer=OpenAiTokenizer(model=OpenAiTokenizer.DEFAULT_OPENAI_GPT_3_CHAT_MODEL),
+                ).try_embed_chunk(b"foobar")
+                == []
+            )

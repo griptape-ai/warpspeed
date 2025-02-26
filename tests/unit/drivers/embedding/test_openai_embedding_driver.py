@@ -1,3 +1,4 @@
+from contextlib import nullcontext
 from unittest.mock import Mock
 
 import pytest
@@ -23,8 +24,16 @@ class TestOpenAiEmbeddingDriver:
     def test_init(self):
         assert OpenAiEmbeddingDriver()
 
-    def test_try_embed_chunk(self):
-        assert OpenAiEmbeddingDriver().try_embed_chunk("foobar") == [0, 1, 0]
+    @pytest.mark.parametrize(
+        ("chunk", "expected_output", "expected_error"),
+        [
+            ("foobar", [0, 1, 0], nullcontext()),
+            (b"foobar", [], pytest.raises(ValueError, match="OpenAiEmbeddingDriver does not support embedding bytes.")),
+        ],
+    )
+    def test_try_embed_chunk(self, chunk, expected_output, expected_error):
+        with expected_error:
+            assert OpenAiEmbeddingDriver().try_embed_chunk(chunk) == expected_output
 
     @pytest.mark.parametrize("model", OpenAiTokenizer.EMBEDDING_MODELS)
     def test_try_embed_chunk_replaces_newlines_in_older_ada_models(self, model, mock_openai):
