@@ -28,7 +28,7 @@ doc_bytes = requests.get("https://arxiv.org/pdf/1706.03762.pdf").content
 agent = Agent(
     tasks=[
         PromptTask(
-            prompt_driver=AnthropicPromptDriver(model="claude-3-5-sonnet-20240620", max_attempts=0),
+            prompt_driver=AnthropicPromptDriver(model="claude-3-7-sonnet-latest", max_attempts=0),
             on_before_run=on_before_run,
             on_after_run=on_after_run,
             input=[
