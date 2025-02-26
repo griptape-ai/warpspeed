@@ -1,5 +1,6 @@
 import os
 import subprocess
+from pathlib import Path
 
 import pytest
 
@@ -25,6 +26,7 @@ SKIP_FILES = [
 
 
 def discover_python_files(directory):
+    """Recursively find all .py files in the specified directory."""
     python_files = []
     for root, _, files in os.walk(directory):
         for file in files:
@@ -38,7 +40,7 @@ def discover_python_files(directory):
 
 @pytest.mark.parametrize("python_file", discover_python_files("docs"))
 def test_python_file_execution(python_file):
-    """Test that the Python file executes successfully."""
+    """Run each Python file using Poetry. If it executes successfully, copy the logs to /tmp/logs."""
     result = subprocess.run(
         ["uv", "run", "python", python_file],
         capture_output=True,
@@ -48,3 +50,14 @@ def test_python_file_execution(python_file):
 
     assert result.returncode == 0
     assert "ERROR" not in result.stdout
+
+    _save_log_file(python_file, result.stdout)
+
+
+def _save_log_file(python_file: str, log_output: str) -> None:
+    """Given a logs path and log output, save the log output to the logs path."""
+    logs_path = Path("/tmp/logs") / Path(python_file).with_suffix(".txt").name
+    logs_path.parent.mkdir(parents=True, exist_ok=True)
+
+    if log_output:
+        logs_path.write_text(log_output)
