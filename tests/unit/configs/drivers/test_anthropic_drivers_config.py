@@ -21,7 +21,7 @@ class TestAnthropicDriversConfig:
                 "temperature": 0.1,
                 "max_tokens": 1000,
                 "stream": False,
-                "model": "claude-3-5-sonnet-20240620",
+                "model": "claude-3-7-sonnet-latest",
                 "top_p": 0.999,
                 "top_k": 250,
                 "use_native_tools": True,
