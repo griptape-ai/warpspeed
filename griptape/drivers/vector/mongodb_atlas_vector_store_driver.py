@@ -38,7 +38,7 @@ class MongoDbAtlasVectorStoreDriver(BaseVectorStoreDriver):
         kw_only=True,
         metadata={"serializable": True},
     )  # https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-stage/#fields
-    _client: MongoClient = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[MongoClient] = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
 
     @lazy_property()
     def client(self) -> MongoClient:

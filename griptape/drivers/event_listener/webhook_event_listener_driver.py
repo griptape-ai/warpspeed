@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Optional
+
 import requests
 from attrs import define, field
 
@@ -9,7 +11,7 @@ from griptape.drivers.event_listener.base_event_listener_driver import BaseEvent
 @define
 class WebhookEventListenerDriver(BaseEventListenerDriver):
     webhook_url: str = field(kw_only=True)
-    headers: dict = field(default=None, kw_only=True)
+    headers: Optional[dict] = field(default=None, kw_only=True)
 
     def try_publish_event_payload(self, event_payload: dict) -> None:
         response = requests.post(url=self.webhook_url, json=event_payload, headers=self.headers)

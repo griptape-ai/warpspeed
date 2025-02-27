@@ -34,7 +34,7 @@ class RedisVectorStoreDriver(BaseVectorStoreDriver):
     db: int = field(kw_only=True, default=0, metadata={"serializable": True})
     password: Optional[str] = field(default=None, kw_only=True, metadata={"serializable": False})
     index: str = field(kw_only=True, metadata={"serializable": True})
-    _client: Redis = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[Redis] = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
 
     @lazy_property()
     def client(self) -> Redis:

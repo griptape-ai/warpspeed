@@ -29,7 +29,9 @@ class MarqoVectorStoreDriver(BaseVectorStoreDriver):
     api_key: str = field(kw_only=True, metadata={"serializable": True})
     url: str = field(kw_only=True, metadata={"serializable": True})
     index: str = field(kw_only=True, metadata={"serializable": True})
-    _client: marqo.Client = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[marqo.Client] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
 
     @lazy_property()
     def client(self) -> marqo.Client:

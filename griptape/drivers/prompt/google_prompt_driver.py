@@ -67,7 +67,9 @@ class GooglePromptDriver(BasePromptDriver):
         default="tool", kw_only=True, metadata={"serializable": True}
     )
     tool_choice: str = field(default="auto", kw_only=True, metadata={"serializable": True})
-    _client: GenerativeModel = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[GenerativeModel] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
 
     @structured_output_strategy.validator  # pyright: ignore[reportAttributeAccessIssue, reportOptionalMemberAccess]
     def validate_structured_output_strategy(self, _: Attribute, value: str) -> str:

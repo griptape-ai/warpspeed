@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
 from attrs import Factory, define, field
 
@@ -29,7 +29,7 @@ class CohereEmbeddingDriver(BaseEmbeddingDriver):
 
     api_key: str = field(kw_only=True, metadata={"serializable": False})
     input_type: str = field(kw_only=True, metadata={"serializable": True})
-    _client: Client = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[Client] = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
     tokenizer: CohereTokenizer = field(
         default=Factory(lambda self: CohereTokenizer(model=self.model, client=self.client), takes_self=True),
         kw_only=True,

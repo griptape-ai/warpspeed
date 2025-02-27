@@ -20,11 +20,12 @@ class HuggingFaceTokenizer(BaseTokenizer):
         ),
         kw_only=True,
     )
-    max_input_tokens: int = field(
+    _max_input_tokens: int = field(
         default=Factory(lambda self: self.tokenizer.model_max_length, takes_self=True),
         kw_only=True,
+        alias="max_input_tokens",
     )
-    max_output_tokens: int = field(default=4096, kw_only=True)
+    _max_output_tokens: int = field(default=4096, kw_only=True, alias="max_output_tokens")
 
     def count_tokens(self, text: str) -> int:
-        return len(self.tokenizer.encode(text))
+        return len(self.tokenizer.encode(text))  # pyright: ignore[reportArgumentType]

@@ -44,13 +44,15 @@ class OpenAiTokenizer(BaseTokenizer):
         "text-embedding-3-large",
     ]
 
-    max_input_tokens: int = field(
+    _max_input_tokens: int = field(
         kw_only=True,
         default=Factory(lambda self: self._default_max_input_tokens(), takes_self=True),
+        alias="max_input_tokens",
     )
-    max_output_tokens: int = field(
+    _max_output_tokens: int = field(
         kw_only=True,
         default=Factory(lambda self: self._default_max_output_tokens(), takes_self=True),
+        alias="max_output_tokens",
     )
 
     @property

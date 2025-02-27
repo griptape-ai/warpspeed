@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
 from attrs import define, field
 
@@ -23,7 +23,9 @@ class HuggingFaceHubEmbeddingDriver(BaseEmbeddingDriver):
     """
 
     api_token: str = field(kw_only=True, metadata={"serializable": True})
-    _client: InferenceClient = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[InferenceClient] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
 
     @lazy_property()
     def client(self) -> InferenceClient:

@@ -2,8 +2,11 @@ from __future__ import annotations
 
 import logging
 from abc import ABC, abstractmethod
+from typing import Optional
 
 from attrs import Factory, define, field
+
+from griptape.utils.decorators import lazy_property
 
 
 @define()
@@ -15,8 +18,16 @@ class BaseTokenizer(ABC):
 
     model: str = field(kw_only=True)
     stop_sequences: list[str] = field(default=Factory(list), kw_only=True)
-    max_input_tokens: int = field(kw_only=True, default=None)
-    max_output_tokens: int = field(kw_only=True, default=None)
+    _max_input_tokens: Optional[int] = field(kw_only=True, default=None, alias="max_input_tokens")
+    _max_output_tokens: Optional[int] = field(kw_only=True, default=None, alias="max_output_tokens")
+
+    @lazy_property()
+    def max_input_tokens(self) -> int:
+        return self._default_max_input_tokens()
+
+    @lazy_property()
+    def max_output_tokens(self) -> int:
+        return self._default_max_output_tokens()
 
     def __attrs_post_init__(self) -> None:
         if hasattr(self, "model"):

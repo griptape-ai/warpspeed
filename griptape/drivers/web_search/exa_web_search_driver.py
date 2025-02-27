@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, Optional
 
 from attrs import define, field
 
@@ -19,7 +19,7 @@ class ExaWebSearchDriver(BaseWebSearchDriver):
     highlights: bool = field(default=False, kw_only=True)
     use_autoprompt: bool = field(default=False, kw_only=True)
     params: dict[str, Any] = field(factory=dict, kw_only=True, metadata={"serializable": True})
-    _client: Exa = field(default=None, kw_only=True, alias="client")
+    _client: Optional[Exa] = field(default=None, kw_only=True, alias="client")
 
     @lazy_property()
     def client(self) -> Exa:

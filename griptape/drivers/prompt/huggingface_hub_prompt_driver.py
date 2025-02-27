@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import logging
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
 from attrs import Attribute, Factory, define, field
 
@@ -47,7 +47,9 @@ class HuggingFaceHubPromptDriver(BasePromptDriver):
         ),
         kw_only=True,
     )
-    _client: InferenceClient = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[InferenceClient] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
 
     @lazy_property()
     def client(self) -> InferenceClient:
@@ -80,7 +82,7 @@ class HuggingFaceHubPromptDriver(BasePromptDriver):
         )
         logger.debug(response)
         input_tokens = len(self.__prompt_stack_to_tokens(prompt_stack))
-        output_tokens = len(self.tokenizer.tokenizer.encode(response))
+        output_tokens = len(self.tokenizer.tokenizer.encode(response))  # pyright: ignore[reportArgumentType]
 
         return Message(
             content=response,
@@ -109,11 +111,11 @@ class HuggingFaceHubPromptDriver(BasePromptDriver):
             full_text += token
             yield DeltaMessage(content=TextDeltaMessageContent(token, index=0))
 
-        output_tokens = len(self.tokenizer.tokenizer.encode(full_text))
+        output_tokens = len(self.tokenizer.tokenizer.encode(full_text))  # pyright: ignore[reportArgumentType]
         yield DeltaMessage(usage=DeltaMessage.Usage(input_tokens=input_tokens, output_tokens=output_tokens))
 
     def prompt_stack_to_string(self, prompt_stack: PromptStack) -> str:
-        return self.tokenizer.tokenizer.decode(self.__prompt_stack_to_tokens(prompt_stack))
+        return self.tokenizer.tokenizer.decode(self.__prompt_stack_to_tokens(prompt_stack))  # pyright: ignore[reportArgumentType]
 
     def _base_params(self, prompt_stack: PromptStack) -> dict:
         params = {

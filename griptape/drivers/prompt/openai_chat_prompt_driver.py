@@ -104,7 +104,9 @@ class OpenAiChatPromptDriver(BasePromptDriver):
     audio: dict = field(
         default=Factory(lambda: {"voice": "alloy", "format": "pcm16"}), kw_only=True, metadata={"serializable": True}
     )
-    _client: openai.OpenAI = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[openai.OpenAI] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
 
     @lazy_property()
     def client(self) -> openai.OpenAI:

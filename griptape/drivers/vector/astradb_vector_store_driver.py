@@ -40,8 +40,10 @@ class AstraDbVectorStoreDriver(BaseVectorStoreDriver):
     environment: Optional[str] = field(kw_only=True, default=None, metadata={"serializable": True})
     astra_db_namespace: Optional[str] = field(default=None, kw_only=True, metadata={"serializable": True})
     caller_name: str = field(default="griptape", kw_only=True, metadata={"serializable": False})
-    _client: astrapy.DataAPIClient = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
-    _collection: astrapy.Collection = field(
+    _client: Optional[astrapy.DataAPIClient] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
+    _collection: Optional[astrapy.Collection] = field(
         default=None, kw_only=True, alias="collection", metadata={"serializable": False}
     )
 

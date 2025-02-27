@@ -53,7 +53,9 @@ class OpenAiImageGenerationDriver(BaseImageGenerationDriver):
         Literal["1792x1024"],
     ] = field(default="1024x1024", kw_only=True, metadata={"serializable": True})
     response_format: Literal["b64_json"] = field(default="b64_json", kw_only=True, metadata={"serializable": True})
-    _client: openai.OpenAI = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[openai.OpenAI] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
 
     @lazy_property()
     def client(self) -> openai.OpenAI:

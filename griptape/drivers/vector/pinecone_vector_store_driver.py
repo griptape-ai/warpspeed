@@ -18,8 +18,12 @@ class PineconeVectorStoreDriver(BaseVectorStoreDriver):
     index_name: str = field(kw_only=True, metadata={"serializable": True})
     environment: str = field(kw_only=True, metadata={"serializable": True})
     project_name: Optional[str] = field(default=None, kw_only=True, metadata={"serializable": True})
-    _client: pinecone.Pinecone = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
-    _index: pinecone.Index = field(default=None, kw_only=True, alias="index", metadata={"serializable": False})
+    _client: Optional[pinecone.Pinecone] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
+    _index: Optional[pinecone.Index] = field(
+        default=None, kw_only=True, alias="index", metadata={"serializable": False}
+    )
 
     @lazy_property()
     def client(self) -> pinecone.Pinecone:

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
 from attrs import Factory, define, field
 
@@ -40,7 +40,9 @@ class AmazonBedrockCohereEmbeddingDriver(BaseEmbeddingDriver):
         default=Factory(lambda self: AmazonBedrockTokenizer(model=self.model), takes_self=True),
         kw_only=True,
     )
-    _client: BedrockClient = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[BedrockClient] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
 
     @lazy_property()
     def client(self) -> BedrockClient:

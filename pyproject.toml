@@ -296,6 +296,7 @@ exclude = ["**/__pycache__"]
 pythonVersion = "3.9"
 reportIncompatibleVariableOverride = "none" # see thread: https://github.com/microsoft/pyright/issues/5933 
 enableExperimentalFeatures = true           # https://github.com/microsoft/pyright/issues/7713
+strictParameterNoneValue = false
 
 [tool.pytest.ini_options]
 markers = ["skip_mock_config"]

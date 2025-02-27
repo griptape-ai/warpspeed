@@ -37,10 +37,10 @@ class GriptapeCloudStructure:
         observe: Whether to enable observability. Enabling requires the `drivers-observability-griptape-cloud` extra.
     """
 
-    _event_listener: EventListener = field(default=None, kw_only=True, alias="event_listener")
-    _observability: Observability = field(default=None, kw_only=True, alias="observability")
+    _event_listener: Optional[EventListener] = field(default=None, kw_only=True, alias="event_listener")
+    _observability: Optional[Observability] = field(default=None, kw_only=True, alias="observability")
     observe: bool = field(default=False, kw_only=True)
-    _output: BaseArtifact = field(default=None, init=False)
+    _output: Optional[BaseArtifact] = field(default=None, init=False)
 
     @lazy_property()
     def event_listener(self) -> EventListener:
@@ -56,7 +56,7 @@ class GriptapeCloudStructure:
         return Observability(observability_driver=GriptapeCloudObservabilityDriver())
 
     @property
-    def output(self) -> BaseArtifact:
+    def output(self) -> Optional[BaseArtifact]:
         return self._output
 
     @output.setter

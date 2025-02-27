@@ -20,7 +20,9 @@ class AmazonSageMakerJumpstartEmbeddingDriver(BaseEmbeddingDriver):
     endpoint: str = field(kw_only=True, metadata={"serializable": True})
     custom_attributes: str = field(default="accept_eula=true", kw_only=True, metadata={"serializable": True})
     inference_component_name: Optional[str] = field(default=None, kw_only=True, metadata={"serializable": True})
-    _client: SageMakerClient = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[SageMakerClient] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
 
     @lazy_property()
     def client(self) -> SageMakerClient:

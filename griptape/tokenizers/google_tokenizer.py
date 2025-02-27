@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
 from attrs import define, field
 
@@ -18,7 +18,9 @@ class GoogleTokenizer(BaseTokenizer):
     MODEL_PREFIXES_TO_MAX_OUTPUT_TOKENS = {"gemini": 8192}
 
     api_key: str = field(kw_only=True, metadata={"serializable": True})
-    _client: GenerativeModel = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[GenerativeModel] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
 
     @lazy_property()
     def client(self) -> GenerativeModel:

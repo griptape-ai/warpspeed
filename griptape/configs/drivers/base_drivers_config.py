@@ -21,28 +21,28 @@ if TYPE_CHECKING:
 
 @define
 class BaseDriversConfig(ABC, SerializableMixin):
-    _prompt_driver: BasePromptDriver = field(
+    _prompt_driver: Optional[BasePromptDriver] = field(
         kw_only=True, default=None, metadata={"serializable": True}, alias="prompt_driver"
     )
-    _image_generation_driver: BaseImageGenerationDriver = field(
+    _image_generation_driver: Optional[BaseImageGenerationDriver] = field(
         kw_only=True, default=None, metadata={"serializable": True}, alias="image_generation_driver"
     )
-    _embedding_driver: BaseEmbeddingDriver = field(
+    _embedding_driver: Optional[BaseEmbeddingDriver] = field(
         kw_only=True, default=None, metadata={"serializable": True}, alias="embedding_driver"
     )
-    _vector_store_driver: BaseVectorStoreDriver = field(
+    _vector_store_driver: Optional[BaseVectorStoreDriver] = field(
         default=None, kw_only=True, metadata={"serializable": True}, alias="vector_store_driver"
     )
-    _conversation_memory_driver: BaseConversationMemoryDriver = field(
+    _conversation_memory_driver: Optional[BaseConversationMemoryDriver] = field(
         default=None, kw_only=True, metadata={"serializable": True}, alias="conversation_memory_driver"
     )
-    _text_to_speech_driver: BaseTextToSpeechDriver = field(
+    _text_to_speech_driver: Optional[BaseTextToSpeechDriver] = field(
         default=None, kw_only=True, metadata={"serializable": True}, alias="text_to_speech_driver"
     )
-    _audio_transcription_driver: BaseAudioTranscriptionDriver = field(
+    _audio_transcription_driver: Optional[BaseAudioTranscriptionDriver] = field(
         default=None, kw_only=True, metadata={"serializable": True}, alias="audio_transcription_driver"
     )
-    _ruleset_driver: BaseRulesetDriver = field(
+    _ruleset_driver: Optional[BaseRulesetDriver] = field(
         default=None, kw_only=True, metadata={"serializable": True}, alias="ruleset_driver"
     )
 

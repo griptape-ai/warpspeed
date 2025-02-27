@@ -16,7 +16,7 @@ if TYPE_CHECKING:
 @define
 class SnowflakeSqlDriver(BaseSqlDriver):
     get_connection: Callable[[], SnowflakeConnection] = field(kw_only=True)
-    _engine: Engine = field(default=None, kw_only=True, alias="engine", metadata={"serializable": False})
+    _engine: Optional[Engine] = field(default=None, kw_only=True, alias="engine", metadata={"serializable": False})
 
     @get_connection.validator  # pyright: ignore[reportFunctionMemberAccess]
     def validate_get_connection(self, _: Attribute, get_connection: Callable[[], SnowflakeConnection]) -> None:

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import logging
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, Optional
 
 from attrs import Attribute, Factory, define, field
 
@@ -59,7 +59,7 @@ class AmazonBedrockPromptDriver(BasePromptDriver):
         default="tool", kw_only=True, metadata={"serializable": True}
     )
     tool_choice: dict = field(default=Factory(lambda: {"auto": {}}), kw_only=True, metadata={"serializable": True})
-    _client: Any = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[Any] = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
 
     @structured_output_strategy.validator  # pyright: ignore[reportAttributeAccessIssue, reportOptionalMemberAccess]
     def validate_structured_output_strategy(self, _: Attribute, value: str) -> str:

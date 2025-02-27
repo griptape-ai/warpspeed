@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
 from attrs import define, field
 
@@ -18,7 +18,7 @@ if TYPE_CHECKING:
 class DuckDuckGoWebSearchDriver(BaseWebSearchDriver):
     language: str = field(default="en", kw_only=True)
     country: str = field(default="us", kw_only=True)
-    _client: DDGS = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[DDGS] = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
 
     @lazy_property()
     def client(self) -> DDGS:
