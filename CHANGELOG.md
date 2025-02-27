@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0](https://github.com/griptape-ai/griptape/compare/v1.4.0...v1.5.0) (2025-02-27)
+
+
+### Features
+
+* **configs-drivers-gemini:** update default prompt driver model to gemini-2.0-flash ([9ba2496](https://github.com/griptape-ai/griptape/commit/9ba249658f1f087739ff1d8b37852f790f676d3e))
+* **deps:** migrate from poetry to uv ([#1762](https://github.com/griptape-ai/griptape/issues/1762)) ([fe36e29](https://github.com/griptape-ai/griptape/commit/fe36e2944ba9a0b55b37f209ef6f502acfc9a8ea))
+* **drivers-web-scraper-markdownify:** update markdownify to 1.0.0 ([#1772](https://github.com/griptape-ai/griptape/issues/1772)) ([f5f1711](https://github.com/griptape-ai/griptape/commit/f5f171152d489a50ed08294b8c05134c4360cb34))
+
+
+### Bug Fixes
+
+* **decorators:** preserve type hints on `[@observable](https://github.com/observable)` decorator ([#1767](https://github.com/griptape-ai/griptape/issues/1767)) ([0e5a15c](https://github.com/griptape-ai/griptape/commit/0e5a15c7645db65a928aa5fb25d8be35bd8c9fba))
+* **drivers-prompt-openai:** remove modalities default ([#1774](https://github.com/griptape-ai/griptape/issues/1774)) ([7e061b5](https://github.com/griptape-ai/griptape/commit/7e061b56963a9fe31a06c1eae4e62fe0094dc3a1))
+
 ## [1.4.0](https://github.com/griptape-ai/griptape/compare/v1.3.0...v1.4.0) (2025-02-24)
 
 
