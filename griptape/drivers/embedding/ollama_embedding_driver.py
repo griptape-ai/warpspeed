@@ -30,5 +30,7 @@ class OllamaEmbeddingDriver(BaseEmbeddingDriver):
     def client(self) -> Client:
         return import_optional_dependency("ollama").Client(host=self.host)
 
-    def try_embed_chunk(self, chunk: str) -> list[float]:
+    def try_embed_chunk(self, chunk: str | bytes) -> list[float]:
+        if isinstance(chunk, bytes):
+            raise ValueError(f"{self.__class__.__name__} does not support embedding bytes.")
         return list(self.client.embeddings(model=self.model, prompt=chunk)["embedding"])

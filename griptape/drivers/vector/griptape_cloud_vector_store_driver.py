@@ -7,6 +7,7 @@ from urllib.parse import urljoin
 import requests
 from attrs import Factory, define, field
 
+from griptape.artifacts import BaseArtifact
 from griptape.drivers.embedding.dummy import DummyEmbeddingDriver
 from griptape.drivers.vector import BaseVectorStoreDriver
 
@@ -83,7 +84,7 @@ class GriptapeCloudVectorStoreDriver(BaseVectorStoreDriver):
 
     def query(
         self,
-        query: str,
+        query: str | BaseArtifact,
         *,
         count: Optional[int] = None,
         namespace: Optional[str] = None,
@@ -97,6 +98,8 @@ class GriptapeCloudVectorStoreDriver(BaseVectorStoreDriver):
 
         Performs a query on the Knowledge Base and returns Artifacts with close vector proximity to the query, optionally filtering to only those that match the provided filter(s).
         """
+        if isinstance(query, BaseArtifact):
+            raise ValueError(f"{self.__class__.__name__} does not support querying with Artifacts.")
         url = urljoin(self.base_url.strip("/"), f"/api/knowledge-bases/{self.knowledge_base_id}/query")
 
         query_args = {

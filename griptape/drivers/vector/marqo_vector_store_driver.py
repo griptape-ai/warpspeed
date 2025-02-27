@@ -12,7 +12,7 @@ from griptape.utils.decorators import lazy_property
 if TYPE_CHECKING:
     import marqo
 
-    from griptape.artifacts import TextArtifact
+    from griptape.artifacts import BaseArtifact, TextArtifact
 
 
 @define
@@ -165,9 +165,42 @@ class MarqoVectorStoreDriver(BaseVectorStoreDriver):
 
         return entries
 
+    def query_vector(
+        self,
+        vector: list[float],
+        *,
+        count: Optional[int] = None,
+        namespace: Optional[str] = None,
+        include_vectors: bool = False,
+        include_metadata: bool = True,
+        **kwargs: Any,
+    ) -> list[BaseVectorStoreDriver.Entry]:
+        """Query the Marqo index for documents.
+
+        Args:
+            vector: The vector to query by.
+            count: The maximum number of results to return.
+            namespace: The namespace to filter results by.
+            include_vectors: Whether to include vector data in the results.
+            include_metadata: Whether to include metadata in the results.
+            kwargs: Additional keyword arguments to pass to the Marqo client.
+
+        Returns:
+            The list of query results.
+        """
+        params = {
+            "limit": count or BaseVectorStoreDriver.DEFAULT_QUERY_COUNT,
+            "attributes_to_retrieve": None if include_metadata else ["_id"],
+            "filter_string": f"namespace:{namespace}" if namespace else None,
+        } | kwargs
+
+        results = self.client.index(self.index).search(**params, context={"tensor": [vector], "weight": 1})
+
+        return self.__process_results(results, include_vectors=include_vectors)
+
     def query(
         self,
-        query: str,
+        query: str | BaseArtifact,
         *,
         count: Optional[int] = None,
         namespace: Optional[str] = None,
@@ -195,22 +228,7 @@ class MarqoVectorStoreDriver(BaseVectorStoreDriver):
         } | kwargs
 
         results = self.client.index(self.index).search(query, **params)
-
-        if include_vectors:
-            results["hits"] = [
-                {**r, **self.client.index(self.index).get_document(r["_id"], expose_facets=True)}
-                for r in results["hits"]
-            ]
-
-        return [
-            BaseVectorStoreDriver.Entry(
-                id=r["_id"],
-                vector=r["_tensor_facets"][0]["_embedding"] if include_vectors else [],
-                score=r["_score"],
-                meta={k: v for k, v in r.items() if k not in ["_score", "_tensor_facets"]},
-            )
-            for r in results["hits"]
-        ]
+        return self.__process_results(results, include_vectors=include_vectors)
 
     def delete_index(self, name: str) -> dict[str, Any]:
         """Delete an index in the Marqo client.
@@ -256,3 +274,20 @@ class MarqoVectorStoreDriver(BaseVectorStoreDriver):
 
     def delete_vector(self, vector_id: str) -> NoReturn:
         raise NotImplementedError(f"{self.__class__.__name__} does not support deletion.")
+
+    def __process_results(self, results: dict, *, include_vectors: bool) -> list[BaseVectorStoreDriver.Entry]:
+        if include_vectors:
+            results["hits"] = [
+                {**r, **self.client.index(self.index).get_document(r["_id"], expose_facets=True)}
+                for r in results["hits"]
+            ]
+
+        return [
+            BaseVectorStoreDriver.Entry(
+                id=r["_id"],
+                vector=r["_tensor_facets"][0]["_embedding"] if include_vectors else [],
+                score=r["_score"],
+                meta={k: v for k, v in r.items() if k not in ["_score", "_tensor_facets"]},
+            )
+            for r in results["hits"]
+        ]

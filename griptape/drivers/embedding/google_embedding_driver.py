@@ -26,7 +26,9 @@ class GoogleEmbeddingDriver(BaseEmbeddingDriver):
     task_type: str = field(default="retrieval_document", kw_only=True, metadata={"serializable": True})
     title: Optional[str] = field(default=None, kw_only=True, metadata={"serializable": True})
 
-    def try_embed_chunk(self, chunk: str) -> list[float]:
+    def try_embed_chunk(self, chunk: str | bytes) -> list[float]:
+        if isinstance(chunk, bytes):
+            raise ValueError(f"{self.__class__.__name__} does not support embedding bytes.")
         genai = import_optional_dependency("google.generativeai")
         genai.configure(api_key=self.api_key)
 
