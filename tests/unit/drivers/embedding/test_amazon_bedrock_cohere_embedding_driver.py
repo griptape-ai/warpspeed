@@ -1,3 +1,4 @@
+from contextlib import nullcontext
 from unittest import mock
 
 import pytest
@@ -24,5 +25,17 @@ class TestAmazonBedrockCohereEmbeddingDriver:
     def test_init(self):
         assert AmazonBedrockCohereEmbeddingDriver()
 
-    def test_try_embed_chunk(self):
-        assert AmazonBedrockCohereEmbeddingDriver().try_embed_chunk("foobar") == [0, 1, 0]
+    @pytest.mark.parametrize(
+        ("chunk", "expected_output", "expected_error"),
+        [
+            ("foobar", [0, 1, 0], nullcontext()),
+            (
+                b"foobar",
+                [],
+                pytest.raises(ValueError, match="AmazonBedrockCohereEmbeddingDriver does not support embedding bytes."),
+            ),
+        ],
+    )
+    def test_try_embed_chunk(self, chunk, expected_output, expected_error):
+        with expected_error:
+            assert AmazonBedrockCohereEmbeddingDriver().try_embed_chunk(chunk) == expected_output

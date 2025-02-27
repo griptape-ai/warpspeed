@@ -1,3 +1,4 @@
+from contextlib import nullcontext
 from unittest.mock import MagicMock
 
 import pytest
@@ -20,5 +21,17 @@ class TestGoogleEmbeddingDriver:
     def test_init(self):
         assert GoogleEmbeddingDriver()
 
-    def test_try_embed_chunk(self):
-        assert GoogleEmbeddingDriver().try_embed_chunk("foobar") == [0, 1, 0]
+    @pytest.mark.parametrize(
+        ("chunk", "expected_output", "expected_error"),
+        [
+            ("foobar", [0, 1, 0], nullcontext()),
+            (
+                b"foobar",
+                [],
+                pytest.raises(ValueError, match="GoogleEmbeddingDriver does not support embedding bytes."),
+            ),
+        ],
+    )
+    def test_try_embed_chunk(self, chunk, expected_output, expected_error):
+        with expected_error:
+            assert GoogleEmbeddingDriver().try_embed_chunk(chunk) == expected_output

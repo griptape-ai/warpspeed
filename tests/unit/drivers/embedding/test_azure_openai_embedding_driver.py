@@ -1,3 +1,4 @@
+from contextlib import nullcontext
 from unittest.mock import Mock
 
 import pytest
@@ -27,5 +28,17 @@ class TestAzureOpenAiEmbeddingDriver:
         assert driver
         assert AzureOpenAiEmbeddingDriver(azure_endpoint="foobar", model="gpt-4").azure_deployment == "gpt-4"
 
-    def test_embed_chunk(self, driver):
-        assert driver.try_embed_chunk("foobar") == [0, 1, 0]
+    @pytest.mark.parametrize(
+        ("chunk", "expected_output", "expected_error"),
+        [
+            ("foobar", [0, 1, 0], nullcontext()),
+            (
+                b"foobar",
+                [],
+                pytest.raises(ValueError, match="AzureOpenAiEmbeddingDriver does not support embedding bytes."),
+            ),
+        ],
+    )
+    def test_embed_chunk(self, driver, chunk, expected_output, expected_error):
+        with expected_error:
+            assert driver.try_embed_chunk(chunk) == expected_output

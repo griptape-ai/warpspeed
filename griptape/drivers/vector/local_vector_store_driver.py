@@ -4,7 +4,6 @@ import json
 import operator
 import os
 import threading
-from dataclasses import asdict
 from typing import Callable, NoReturn, Optional, TextIO
 
 from attrs import Factory, define, field
@@ -118,7 +117,7 @@ class LocalVectorStoreDriver(BaseVectorStoreDriver):
 
     def __save_entries_to_file(self, json_file: TextIO) -> None:
         with self.thread_lock:
-            serialized_data = {k: asdict(v) for k, v in self.entries.items()}
+            serialized_data = {k: v.to_dict() for k, v in self.entries.items()}
 
             json.dump(serialized_data, json_file)
 
