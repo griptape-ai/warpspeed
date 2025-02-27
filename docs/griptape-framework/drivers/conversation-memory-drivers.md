@@ -13,17 +13,31 @@ You can persist and load memory by using Conversation Memory Drivers. You can bu
 
 The [GriptapeCloudConversationMemoryDriver](../../reference/griptape/drivers/memory/conversation/griptape_cloud_conversation_memory_driver.md) allows you to persist Conversation Memory in Griptape Cloud. It provides seamless integration with Griptape's cloud-based `Threads` and `Messages` resources.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/conversation_memory_drivers_griptape_cloud.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/conversation_memory_drivers_griptape_cloud.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/conversation_memory_drivers_griptape_cloud.txt"
+    ```
+
 
 ### Local
 
 The [LocalConversationMemoryDriver](../../reference/griptape/drivers/memory/conversation/local_conversation_memory_driver.md) allows you to persist Conversation Memory in a local JSON file.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/conversation_memory_drivers_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/conversation_memory_drivers_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/conversation_memory_drivers_1.txt"
+    ```
+
 
 ### Amazon DynamoDb
 
@@ -33,9 +47,16 @@ The [LocalConversationMemoryDriver](../../reference/griptape/drivers/memory/conv
 
 The [AmazonDynamoDbConversationMemoryDriver](../../reference/griptape/drivers/memory/conversation/amazon_dynamodb_conversation_memory_driver.md) allows you to persist Conversation Memory in [Amazon DynamoDb](https://aws.amazon.com/dynamodb/).
 
-```python
---8<-- "docs/griptape-framework/drivers/src/conversation_memory_drivers_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/conversation_memory_drivers_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/conversation_memory_drivers_2.txt"
+    ```
+
 
 Optional parameters `sort_key` and `sort_key_value` can be supplied for tables with a composite primary key.
 
@@ -47,6 +68,13 @@ Optional parameters `sort_key` and `sort_key_value` can be supplied for tables w
 
 The [RedisConversationMemoryDriver](../../reference/griptape/drivers/memory/conversation/redis_conversation_memory_driver.md) allows you to persist Conversation Memory in [Redis](https://redis.io/).
 
-```python
---8<-- "docs/griptape-framework/drivers/src/conversation_memory_drivers_3.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/conversation_memory_drivers_3.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/conversation_memory_drivers_3.txt"
+    ```
+

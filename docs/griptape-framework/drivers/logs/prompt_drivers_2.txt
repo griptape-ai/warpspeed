@@ -1,0 +1,5 @@
+The time complexity of this code is O(n * k), where n is the value of the variable `n` and k is the value of the variable `k`. 
+
+The outer loop iterates `n` times, and for each iteration of the outer loop, the inner loop iterates `k` times. Therefore, the total number of iterations of the inner loop is n * k.
+
+Inside the inner loop, there is a constant time operation of adding `i` to the `accum` variable. Since this operation is performed n * k times, the overall time complexity is O(n * k).

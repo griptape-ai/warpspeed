@@ -1,0 +1,8 @@
+[02/27/25 19:24:10] INFO     PromptTask 6c3ecaf6cd274cc3a3a19cd03d2ae0c3        
+                             Input: My name is Jeff.                            
+[02/27/25 19:24:11] INFO     PromptTask 6c3ecaf6cd274cc3a3a19cd03d2ae0c3        
+                             Output: Hello, Jeff! How can I assist you today?   
+[02/27/25 19:24:12] INFO     PromptTask 6c3ecaf6cd274cc3a3a19cd03d2ae0c3        
+                             Input: What is my name?                            
+[02/27/25 19:24:13] INFO     PromptTask 6c3ecaf6cd274cc3a3a19cd03d2ae0c3        
+                             Output: Your name is Jeff.                         

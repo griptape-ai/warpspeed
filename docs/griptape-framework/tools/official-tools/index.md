@@ -13,17 +13,31 @@ Griptape provides a set of official Tools for common tasks. In general, Griptape
 
 This Tool enables [Agents](../../../griptape-framework/structures/agents.md) to transcribe speech from text using [Audio Transcription Drivers](../../../reference/griptape/drivers/audio_transcription/base_audio_transcription_driver.md).
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/audio_transcription_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/audio_transcription_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/audio_transcription_tool_1.txt"
+    ```
+
 
 ### Calculator
 
 This tool enables LLMs to make simple calculations.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/calculator_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/calculator_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/calculator_tool_1.txt"
+    ```
+
 
 ```
 [09/08/23 14:23:51] INFO     Task bbc6002a5e5b4655bb52b6a550a1b2a5              
@@ -96,9 +110,16 @@ You can specify a local working directory and environment variables during tool 
 
 This tool enables LLMs to get current date and time.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/date_time_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/date_time_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/date_time_tool_1.txt"
+    ```
+
 
 ```
 [09/11/23 15:26:02] INFO     Task d0bf49dacd8849e695494578a333f6cc              
@@ -137,9 +158,16 @@ python -m smtpd -c DebuggingServer -n localhost:1025
 
 The [ExractionTool](../../../reference/griptape/tools/extraction/tool.md) enables LLMs to extract structured text from unstructured data.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/extraction_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/extraction_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/extraction_tool_1.txt"
+    ```
+
 
 ```
 [08/12/24 15:58:03] INFO     PromptTask 43b3d209a83c470d8371b7ef4af175b4
@@ -194,9 +222,16 @@ The [ExractionTool](../../../reference/griptape/tools/extraction/tool.md) enable
 
 This tool enables LLMs to save and load files.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/file_manager_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/file_manager_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/file_manager_tool_1.txt"
+    ```
+
 
 ```
 [09/12/23 12:07:56] INFO     Task 16a1ce1847284ae3805485bad7d99116              
@@ -227,49 +262,91 @@ The [GriptapeCloudToolTool](../../../reference/griptape/tools/griptape_cloud_too
 
 **Note:** This tool requires a [Tool](https://cloud.griptape.ai/tools) hosted in Griptape Cloud and an [API Key](https://cloud.griptape.ai/configuration/api-keys) for access.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/griptape_cloud_tool_tool.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/griptape_cloud_tool_tool.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/griptape_cloud_tool_tool.txt"
+    ```
+
 
 ### Image Query
 
 This tool allows Agents to execute natural language queries on the contents of images using multimodal models.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/image_query_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/image_query_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/image_query_tool_1.txt"
+    ```
+
 
 ### Inpainting Image Generation
 
 This tool allows LLMs to generate images using inpainting, where an input image is altered within the area specified by a mask image according to a prompt. The input and mask images can be provided either by their file path or by their [Task Memory](../../../griptape-framework/structures/task-memory.md) references.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/inpainting_image_generation_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/inpainting_image_generation_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/inpainting_image_generation_tool_1.txt"
+    ```
+
 
 ### Outpainting Image Generation
 
 This tool allows LLMs to generate images using outpainting, where an input image is altered outside of the area specified by a mask image according to a prompt. The input and mask images can be provided either by their file path or by their [Task Memory](../../../griptape-framework/structures/task-memory.md) references.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/outpainting_image_generation_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/outpainting_image_generation_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/outpainting_image_generation_tool_1.txt"
+    ```
+
 
 ### Prompt Image Generation
 
 This tool allows LLMs to generate images from a text prompt.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/prompt_image_generation_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/prompt_image_generation_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/prompt_image_generation_tool_1.txt"
+    ```
+
 
 ### Prompt Summary
 
 The [PromptSummaryTool](../../../reference/griptape/tools/prompt_summary/tool.md) enables LLMs summarize text data.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/prompt_summary_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/prompt_summary_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/prompt_summary_tool_1.txt"
+    ```
+
 
 ````
 [08/12/24 15:54:46] INFO     PromptTask 8be73eb542c44418ba880399044c017a
@@ -376,9 +453,16 @@ The [PromptSummaryTool](../../../reference/griptape/tools/prompt_summary/tool.md
 
 The [QueryTool](../../../reference/griptape/tools/query/tool.md) enables Agents to query unstructured data for specific information.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/query_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/query_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/query_tool_1.txt"
+    ```
+
 
 ```
 [08/12/24 15:49:23] INFO     PromptTask a88abda2e5324bdf81a3e2b99c26b9df
@@ -467,9 +551,16 @@ The [RagTool](../../../reference/griptape/tools/rag/tool.md) enables LLMs to que
 
 Here is an example of how it can be used with a local vector store driver:
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/rag_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/rag_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/rag_tool_1.txt"
+    ```
+
 
 ```
 [07/11/24 13:30:43] INFO     PromptTask a6d057d5c71d4e9cb6863a2adb64b76c
@@ -503,17 +594,31 @@ The [RestApiTool](../../../reference/griptape/tools/rest_api/tool.md) tool uses 
 
 The following example is built using [https://jsonplaceholder.typicode.com/guide/](https://jsonplaceholder.typicode.com/guide/).
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/rest_api_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/rest_api_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/rest_api_tool_1.txt"
+    ```
+
 
 ### Sql
 
 This tool enables LLMs to execute SQL statements via [SQLAlchemy](https://www.sqlalchemy.org/). Depending on your underlying SQL engine, [configure](https://docs.sqlalchemy.org/en/20/core/engines.html) your `engine_url` and give the LLM a hint about what engine you are using via `engine_name`, so that it can create engine-specific statements.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/sql_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/sql_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/sql_tool_1.txt"
+    ```
+
 
 ```
 [08/12/24 14:59:31] INFO     PromptTask e302f7315d1a4f939e0125103ff4f09f
@@ -570,9 +675,16 @@ This tool enables LLMs to execute SQL statements via [SQLAlchemy](https://www.sq
 The [StructureRunTool](../../../reference/griptape/tools/structure_run/tool.md) Tool provides a way to run Structures via a Tool.
 It requires you to provide a [Structure Run Driver](../../../griptape-framework/drivers/structure-run-drivers.md) to run the Structure in the desired environment.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/structure_run_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/structure_run_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/structure_run_tool_1.txt"
+    ```
+
 
 ```
 [05/02/24 13:50:03] INFO     PromptTask 4e9458375bda4fbcadb77a94624ed64c
@@ -611,9 +723,16 @@ It requires you to provide a [Structure Run Driver](../../../griptape-framework/
 
 This Tool enables LLMs to synthesize speech from text using [Text to Speech Drivers](../../../reference/griptape/drivers/text_to_speech/index.md).
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/text_to_speech_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/text_to_speech_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/text_to_speech_tool_1.txt"
+    ```
+
 
 ### Variation Image Generation
 
@@ -621,15 +740,29 @@ This Tool allows LLMs to generate variations of an input image from a text promp
 
 #### Referencing an Image by File Path
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/variation_image_generation_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/variation_image_generation_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/variation_image_generation_tool_1.txt"
+    ```
+
 
 #### Referencing an Image in Task Memory
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/variation_image_generation_tool_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/variation_image_generation_tool_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/variation_image_generation_tool_2.txt"
+    ```
+
 
 ### Vector Store
 
@@ -637,17 +770,31 @@ The [VectorStoreTool](../../../reference/griptape/tools/vector_store/tool.md) en
 
 Here is an example of how it can be used with a local vector store driver:
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/vector_store_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/vector_store_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/vector_store_tool_1.txt"
+    ```
+
 
 ### Web Scraper
 
 This tool enables LLMs to scrape web pages for full text, summaries, authors, titles, and keywords. It can also execute search queries to answer specific questions about the page. This tool uses OpenAI APIs for some of its activities, so in order to use it provide a valid API key in `openai_api_key`.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/web_scraper_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/web_scraper_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/web_scraper_tool_1.txt"
+    ```
+
 
 ```
 [08/12/24 15:32:08] INFO     PromptTask b14a4305365f4b17a4dcf235f84397e2
@@ -744,9 +891,16 @@ This tool enables LLMs to scrape web pages for full text, summaries, authors, ti
 
 This tool enables LLMs to search the web.
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/web_search_tool_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/web_search_tool_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/web_search_tool_1.txt"
+    ```
+
 
 ```
 [09/08/23 15:37:25] INFO     Task 2cf557f7f7cd4a20a7fa2f0c46af2f71              
@@ -835,6 +989,13 @@ This tool enables LLMs to search the web.
 Extra schema properties can be added to the Tool to allow for more customization if the Driver supports it.
 In this example, we add a `sort` property to the `search` Activity which will be added as a [Google custom search query parameter](https://developers.google.com/custom-search/v1/reference/rest/v1/cse/list).
 
-```python
---8<-- "docs/griptape-framework/tools/official-tools/src/web_search_tool_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/official-tools/src/web_search_tool_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/official-tools/logs/web_search_tool_2.txt"
+    ```
+

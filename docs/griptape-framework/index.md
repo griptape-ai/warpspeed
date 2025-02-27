@@ -68,9 +68,16 @@ For a comprehensive list of extras, please refer to the `[project.optional-depen
 
 With Griptape, you can create *structures*, such as [Agents](./structures/agents.md), [Pipelines](./structures/pipelines.md), and [Workflows](./structures/workflows.md), that are composed of different types of tasks. First, let's build a simple Agent that we can interact with through a chat based interface.
 
-```python
---8<-- "docs/griptape-framework/src/index_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/src/index_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/logs/index_1.txt"
+    ```
+
 
 Run this script in your IDE and you'll be presented with a `Q:` prompt where you can interact with your model.
 
@@ -91,17 +98,31 @@ Q:
 
 If you want to skip the chat interface and load an initial prompt, you can do so using the `.run()` method:
 
-```python
---8<-- "docs/griptape-framework/src/index_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/src/index_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/logs/index_2.txt"
+    ```
+
 
 Agents on their own are fun, but let's add some capabilities to them using Griptape Tools.
 
 ### Build a Simple Agent with Tools
 
-```python
---8<-- "docs/griptape-framework/src/index_3.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/src/index_3.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/logs/index_3.txt"
+    ```
+
 
 Here is the chain of thought from the Agent. Notice where it realizes it can use the tool you just injected to do the calculation.[^1]
 
@@ -132,9 +153,16 @@ Answer: 13,841,287,201
 
 Agents are great for getting started, but they are intentionally limited to a single task. Pipelines, however, allow us to define any number of tasks to run in sequence. Let's define a simple two-task Pipeline that uses tools and memory:
 
-```python
---8<-- "docs/griptape-framework/src/index_4.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/src/index_4.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/logs/index_4.txt"
+    ```
+
 
 ```
 [08/12/24 14:50:28] INFO     PromptTask 19dcf6020968468a91aa8a93c2a3f645

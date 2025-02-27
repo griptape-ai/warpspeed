@@ -1,0 +1,23 @@
+[02/27/25 19:28:54] INFO     PromptTask 0b16d64889ff44cebc0898f3e88c6da2        
+                             Input: What is the square root of 12345?           
+[02/27/25 19:28:58] INFO     Subtask eae393f945ed4ce98fd2844f8918fb2e           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_92GgLA7xz8JjNRsLDmZrdc0j",        
+                                 "name": "CalculatorTool",                      
+                                 "path": "calculate",                           
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "expression": "12345 ** 0.5"               
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+                    INFO     Subtask eae393f945ed4ce98fd2844f8918fb2e           
+                             Response: Output of "CalculatorTool.calculate" was 
+                             stored in memory with memory_name "TaskMemory" and 
+                             artifact_namespace                                 
+                             "b06353f969ac4699b64933a2f94403e2"                 
+[02/27/25 19:28:59] INFO     PromptTask 0b16d64889ff44cebc0898f3e88c6da2        
+                             Output: The square root of 12345 is approximately  
+                             111.108.                                           

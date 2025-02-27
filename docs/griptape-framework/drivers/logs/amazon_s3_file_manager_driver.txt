@@ -1,0 +1,2 @@
+# This is a test file for the AmazonS3FileManagerDriver integration tests.
+Successfully saved file at: s3://gt-iteg-tests-bucket-us-east-1-prod/amazon_s3_file_manager_driver_test_file.py

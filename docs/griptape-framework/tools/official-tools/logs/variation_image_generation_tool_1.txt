@@ -1,0 +1,30 @@
+[02/27/25 19:23:36] INFO     PromptTask 1a73404b63e14c358d24caaa769a025c        
+                             Input: Generate a variation of the image located at
+                             tests/resources/mountain.png depicting a mountain  
+                             on a winter day                                    
+[02/27/25 19:23:42] INFO     Subtask c9f97f49313f4027afa0524d1bdd62dd           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_Yob5l9MkfCwksAQPaGcp326g",        
+                                 "name": "VariationImageGenerationTool",        
+                                 "path": "image_variation_from_file",           
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "prompt": "A mountain on a winter day,     
+                             covered in snow, with a clear blue sky and sunlight
+                             reflecting off the snow.",                         
+                                     "negative_prompt": "summer, green          
+                             vegetation, no snow",                              
+                                     "image_file":                              
+                             "tests/resources/mountain.png"                     
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+[02/27/25 19:23:47] INFO     Subtask c9f97f49313f4027afa0524d1bdd62dd           
+                             Response: Image, format: png, size: 557970 bytes   
+[02/27/25 19:23:48] INFO     PromptTask 1a73404b63e14c358d24caaa769a025c        
+                             Output: Here is the generated variation of the     
+                             image depicting a mountain on a winter day. The    
+                             mountain is covered in snow, with a clear blue sky 
+                             and sunlight reflecting off the snow.              

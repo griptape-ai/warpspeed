@@ -1,0 +1,67 @@
+[02/27/25 19:29:47] INFO     PromptTask 67ec9d0f10d44a27af9914a56b9b5ac4        
+                             Input: Load https://www.griptape.ai, summarize it, 
+                             and store it in a file called griptape.txt         
+[02/27/25 19:29:48] INFO     Subtask d4ce49316cb746ceb88c14d7c22a0a15           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_KBISiSRdjVh36UcXbWoOAAVl",        
+                                 "name": "WebScraperTool",                      
+                                 "path": "get_content",                         
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "url": "https://www.griptape.ai"           
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+[02/27/25 19:29:50] INFO     Subtask d4ce49316cb746ceb88c14d7c22a0a15           
+                             Response: Output of "WebScraperTool.get_content"   
+                             was stored in memory with memory_name "TaskMemory" 
+                             and artifact_namespace                             
+                             "8f5fbf3471f44ff4804c140367b68e87"                 
+[02/27/25 19:29:51] INFO     Subtask 23954ebeb61f41a7bcacd881719b5cfe           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_GB2GOQLvPkVfp80RSuXCIvNm",        
+                                 "name": "PromptSummaryTool",                   
+                                 "path": "summarize",                           
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "summary": {                               
+                                       "memory_name": "TaskMemory",             
+                                       "artifact_namespace":                    
+                             "8f5fbf3471f44ff4804c140367b68e87"                 
+                                     }                                          
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+[02/27/25 19:29:53] INFO     Subtask 23954ebeb61f41a7bcacd881719b5cfe           
+                             Response: Output of "PromptSummaryTool.summarize"  
+                             was stored in memory with memory_name "TaskMemory" 
+                             and artifact_namespace                             
+                             "dd639be9253845a2a26159aa309363cf"                 
+[02/27/25 19:29:54] INFO     Subtask adb57403ee574ab28e87eaecbb854a0b           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_e4DaCNiCkj3TdVFy41g3wLmb",        
+                                 "name": "FileManagerTool",                     
+                                 "path": "save_memory_artifacts_to_disk",       
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "dir_name": ".",                           
+                                     "file_name": "griptape.txt",               
+                                     "memory_name": "TaskMemory",               
+                                     "artifact_namespace":                      
+                             "dd639be9253845a2a26159aa309363cf"                 
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+                    INFO     Subtask adb57403ee574ab28e87eaecbb854a0b           
+                             Response: Successfully saved memory artifacts to   
+                             disk                                               
+[02/27/25 19:29:55] INFO     PromptTask 67ec9d0f10d44a27af9914a56b9b5ac4        
+                             Output: The content from "https://www.griptape.ai" 
+                             has been summarized and stored in a file named     
+                             "griptape.txt".                                    

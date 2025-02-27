@@ -19,22 +19,43 @@ The [Eleven Labs Text to Speech Driver](../../reference/griptape/drivers/text_to
 
     This driver requires the `drivers-text-to-speech-elevenlabs` [extra](../index.md#extras).
 
-```python
---8<-- "docs/griptape-framework/drivers/src/text_to_speech_drivers_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/text_to_speech_drivers_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/text_to_speech_drivers_1.txt"
+    ```
+
 
 ## OpenAI
 
 The [OpenAI Text to Speech Driver](../../reference/griptape/drivers/text_to_speech/openai_text_to_speech_driver.md) provides support for text-to-speech models hosted by OpenAI. This Driver supports configurations specific to OpenAI, like voice selection and output format.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/text_to_speech_drivers_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/text_to_speech_drivers_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/text_to_speech_drivers_2.txt"
+    ```
+
 
 ## Azure OpenAI
 
 The [Azure OpenAI Text to Speech Driver](../../reference/griptape/drivers/text_to_speech/azure_openai_text_to_speech_driver.md) provides support for text-to-speech models hosted in your Azure OpenAI instance. This Driver supports configurations specific to OpenAI, like voice selection and output format.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/text_to_speech_drivers_3.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/text_to_speech_drivers_3.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/text_to_speech_drivers_3.txt"
+    ```
+

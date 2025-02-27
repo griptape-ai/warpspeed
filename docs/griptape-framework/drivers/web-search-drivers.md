@@ -11,9 +11,16 @@ Web Search Drivers can be used to search for links from a search query. They are
 
 You can use Web Search Drivers with [Structures](../structures/agents.md):
 
-```python
---8<-- "docs/griptape-framework/drivers/src/web_search_drivers_5.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/web_search_drivers_5.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/web_search_drivers_5.txt"
+    ```
+
 
 ```
 PromptTask 45a53f1024494baab41a1f10a67017b1

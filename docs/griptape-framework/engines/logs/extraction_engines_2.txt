@@ -1,0 +1,74 @@
+{
+  "model": "GPT-1",
+  "notes": [
+    "Introduced in 2018.",
+    "Considered the first LLM despite having only 0.117 billion parameters."
+  ]
+}
+{
+  "model": "GPT-2",
+  "notes": [
+    "Introduced in 2019.",
+    "Caught widespread attention because OpenAI initially deemed it too powerful to release publicly.",
+    "Has 1.5 billion parameters."
+  ]
+}
+{
+  "model": "GPT-3",
+  "notes": [
+    "Introduced in 2020.",
+    "Available only via API with no offering of downloading the model to execute locally."
+  ]
+}
+{
+  "model": "ChatGPT",
+  "notes": [
+    "Released in 2022.",
+    "Consumer-facing browser-based model that captured the imaginations of the general population."
+  ]
+}
+{
+  "model": "GPT-4",
+  "notes": [
+    "Released in 2023.",
+    "Praised for its increased accuracy and multimodal capabilities.",
+    "OpenAI did not reveal the high-level architecture and the number of parameters."
+  ]
+}
+{
+  "model": "OpenAI o1",
+  "notes": [
+    "Released in 2024.",
+    "Reasoning model that generates long chains of thought before returning a final answer."
+  ]
+}
+{
+  "model": "DeepSeek R1",
+  "notes": [
+    "Released in January 2025.",
+    "671-billion-parameter open-weight model.",
+    "Performs comparably to OpenAI o1 but at a much lower cost."
+  ]
+}
+{
+  "model": "BERT",
+  "notes": [
+    "Introduced in 2018.",
+    "Encoder-only model.",
+    "Academic and research usage began to decline in 2023."
+  ]
+}
+{
+  "model": "Mistral 7B and Mixtral 8x7b",
+  "notes": [
+    "Models by Mistral AI.",
+    "Have the more permissive Apache License."
+  ]
+}
+{
+  "model": "Pixtral 12B",
+  "notes": [
+    "Introduced by Mistral in September 2024.",
+    "Multimodal model."
+  ]
+}

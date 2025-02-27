@@ -13,9 +13,16 @@ You can access the final output of the Agent by using the [output](../../referen
 
 ### Agent Tools
 
-```python
---8<-- "docs/griptape-framework/structures/src/agents_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/agents_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/agents_2.txt"
+    ```
+
 
 ```
 [07/23/24 10:53:41] INFO     PromptTask 487db777bc014193ba90b061451b69a6
@@ -42,9 +49,16 @@ Answer: 62,748,517
 
 ### Agent Input
 
-```python
---8<-- "docs/griptape-framework/structures/src/agents_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/agents_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/agents_1.txt"
+    ```
+
 
 ```
 [09/08/23 10:10:24] INFO     PromptTask e70fb08090b24b91a9307fa83479e851

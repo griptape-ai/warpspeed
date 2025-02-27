@@ -1,0 +1,31 @@
+[02/27/25 19:27:37] INFO     PromptTask 56daf0df7a2845e9995aaec6cde1c6b6        
+                             Input: Generate an image of a castle built into the
+                             side of a mountain by inpainting the image at      
+                             tests/resources/mountain.png using the mask at     
+                             tests/resources/mountain-mask.png.                 
+[02/27/25 19:27:40] INFO     Subtask 29f1aff795f74154b9119bf514a7bed4           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_4K3I6MXe0md7aw5d8dlOZdh3",        
+                                 "name": "InpaintingImageGenerationTool",       
+                                 "path": "image_inpainting_from_file",          
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "prompt": "castle built into the side of a 
+                             mountain",                                         
+                                     "negative_prompt": "",                     
+                                     "image_file":                              
+                             "tests/resources/mountain.png",                    
+                                     "mask_file":                               
+                             "tests/resources/mountain-mask.png"                
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+[02/27/25 19:27:45] INFO     Subtask 29f1aff795f74154b9119bf514a7bed4           
+                             Response: Image, format: png, size: 577375 bytes   
+[02/27/25 19:27:46] INFO     PromptTask 56daf0df7a2845e9995aaec6cde1c6b6        
+                             Output: The image of a castle built into the side  
+                             of a mountain has been successfully generated. If  
+                             you need further assistance or modifications, feel 
+                             free to ask!                                       

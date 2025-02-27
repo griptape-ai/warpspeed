@@ -1,0 +1,7 @@
+[02/27/25 19:26:55] INFO     PromptTask 7a5a249debee4ed597ad5b7a7a19cb71        
+                             Input: What is the sentiment of this review?       
+                             Review: "I really enjoyed this movie!"             
+                    INFO     PromptTask 7a5a249debee4ed597ad5b7a7a19cb71        
+                             Output: The sentiment of the review is positive.   
+                             The customer appears to have enjoyed the movie and 
+                             likely would recommend it to others.               

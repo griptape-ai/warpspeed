@@ -57,6 +57,13 @@ Responses are generated in this final stage.
 
 The following example shows a simple RAG pipeline that translates incoming queries into English, retrieves data from a local vector store, reranks the results using the local rerank driver, and generates a response:
 
-```python
---8<-- "docs/griptape-framework/engines/src/rag_engines_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/engines/src/rag_engines_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/engines/logs/rag_engines_1.txt"
+    ```
+

@@ -1,0 +1,21 @@
+[02/27/25 19:28:18] INFO     PromptTask 4ef08d423e69467db1a421b48c2d75ac        
+                             Input: Hello my name is John?                      
+                    INFO     PromptTask 4ef08d423e69467db1a421b48c2d75ac        
+                             Output: Hello John! How can I assist you today?    
+                    INFO     PromptTask 4ef08d423e69467db1a421b48c2d75ac        
+                             Input: What is my name?                            
+[02/27/25 19:28:19] INFO     PromptTask 4ef08d423e69467db1a421b48c2d75ac        
+                             Output: Your name is John.                         
+                    INFO     PromptTask 4ef08d423e69467db1a421b48c2d75ac        
+                             Input: My favorite color is blue.                  
+[02/27/25 19:28:20] INFO     PromptTask 4ef08d423e69467db1a421b48c2d75ac        
+                             Output: Blue is a great color! It's often          
+                             associated with calmness and serenity. Do you have 
+                             a favorite shade of blue?                          
+Q: Hello my name is John?
+A: Hello John! How can I assist you today?
+Q: What is my name?
+A: Your name is John.
+Q: My favorite color is blue.
+A: Blue is a great color! It's often associated with calmness and serenity. Do you have a favorite shade of blue?
+Summary: John introduces himself, and the assistant offers help.
