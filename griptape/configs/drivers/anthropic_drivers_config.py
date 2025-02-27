@@ -9,4 +9,4 @@ from griptape.utils.decorators import lazy_property
 class AnthropicDriversConfig(DriversConfig):
     @lazy_property()
     def prompt_driver(self) -> AnthropicPromptDriver:
-        return AnthropicPromptDriver(model="claude-3-5-sonnet-20240620")
+        return AnthropicPromptDriver(model="claude-3-7-sonnet-latest")

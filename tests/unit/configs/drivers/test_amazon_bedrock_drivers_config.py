@@ -29,7 +29,7 @@ class TestAmazonBedrockDriversConfig:
                 "type": "LocalConversationMemoryDriver",
                 "persist_file": None,
             },
-            "embedding_driver": {"model": "amazon.titan-embed-text-v1", "type": "AmazonBedrockTitanEmbeddingDriver"},
+            "embedding_driver": {"model": "amazon.titan-embed-text-v2:0", "type": "AmazonBedrockTitanEmbeddingDriver"},
             "image_generation_driver": {
                 "image_generation_model_driver": {
                     "cfg_scale": 7,
@@ -39,13 +39,13 @@ class TestAmazonBedrockDriversConfig:
                 },
                 "image_height": 512,
                 "image_width": 512,
-                "model": "amazon.titan-image-generator-v1",
+                "model": "amazon.titan-image-generator-v2:0",
                 "seed": None,
                 "type": "AmazonBedrockImageGenerationDriver",
             },
             "prompt_driver": {
                 "max_tokens": None,
-                "model": "anthropic.claude-3-5-sonnet-20240620-v1:0",
+                "model": "anthropic.claude-3-7-sonnet-20250219-v1:0",
                 "stream": False,
                 "temperature": 0.1,
                 "type": "AmazonBedrockPromptDriver",
@@ -56,7 +56,7 @@ class TestAmazonBedrockDriversConfig:
             },
             "vector_store_driver": {
                 "embedding_driver": {
-                    "model": "amazon.titan-embed-text-v1",
+                    "model": "amazon.titan-embed-text-v2:0",
                     "type": "AmazonBedrockTitanEmbeddingDriver",
                 },
                 "type": "LocalVectorStoreDriver",
@@ -85,7 +85,7 @@ class TestAmazonBedrockDriversConfig:
                 "type": "LocalConversationMemoryDriver",
                 "persist_file": None,
             },
-            "embedding_driver": {"model": "amazon.titan-embed-text-v1", "type": "AmazonBedrockTitanEmbeddingDriver"},
+            "embedding_driver": {"model": "amazon.titan-embed-text-v2:0", "type": "AmazonBedrockTitanEmbeddingDriver"},
             "image_generation_driver": {
                 "image_generation_model_driver": {
                     "cfg_scale": 7,
@@ -95,13 +95,13 @@ class TestAmazonBedrockDriversConfig:
                 },
                 "image_height": 512,
                 "image_width": 512,
-                "model": "amazon.titan-image-generator-v1",
+                "model": "amazon.titan-image-generator-v2:0",
                 "seed": None,
                 "type": "AmazonBedrockImageGenerationDriver",
             },
             "prompt_driver": {
                 "max_tokens": None,
-                "model": "anthropic.claude-3-5-sonnet-20240620-v1:0",
+                "model": "anthropic.claude-3-7-sonnet-20250219-v1:0",
                 "stream": False,
                 "temperature": 0.1,
                 "type": "AmazonBedrockPromptDriver",
@@ -112,7 +112,7 @@ class TestAmazonBedrockDriversConfig:
             },
             "vector_store_driver": {
                 "embedding_driver": {
-                    "model": "amazon.titan-embed-text-v1",
+                    "model": "amazon.titan-embed-text-v2:0",
                     "type": "AmazonBedrockTitanEmbeddingDriver",
                 },
                 "type": "LocalVectorStoreDriver",
