@@ -22,9 +22,16 @@ Griptape provides predefined [DriversConfig](../../reference/griptape/configs/dr
 
 `DriversConfig`s can be used as a Python Context Manager using the `with` statement to temporarily change the default configurations for a block of code.
 
-```python
---8<-- "docs/griptape-framework/structures/src/drivers_config_with.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/drivers_config_with.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/drivers_config_with.txt"
+    ```
+
 
 #### OpenAI
 
@@ -101,9 +108,16 @@ Griptape provides a predefined [LoggingConfig](../../reference/griptape/configs/
 
 You can enable debug logs to view more granular information such as request/response payloads.
 
-```python
---8<-- "docs/griptape-framework/structures/src/debug_logs.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/structures/src/debug_logs.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/structures/logs/debug_logs.txt"
+    ```
+
 
 ```
 [10/09/24 15:30:04] INFO     PromptTask 75ef1747a5824bc8ac838f3081aeb57d

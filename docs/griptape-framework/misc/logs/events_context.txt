@@ -1,0 +1,11 @@
+[02/27/25 19:30:11] INFO     PromptTask 0800f30b15d5455f8ed8ad91d55afe33        
+                             Input: Hello!                                      
+Out of context: StartPromptEvent
+[02/27/25 19:30:12] INFO     PromptTask 0800f30b15d5455f8ed8ad91d55afe33        
+                             Output: Hello! How can I assist you today?         
+In context: FinishStructureRunEvent
+                    INFO     PromptTask 0800f30b15d5455f8ed8ad91d55afe33        
+                             Input: Hello!                                      
+Out of context: StartPromptEvent
+                    INFO     PromptTask 0800f30b15d5455f8ed8ad91d55afe33        
+                             Output: Hi there! How can I help you today?        

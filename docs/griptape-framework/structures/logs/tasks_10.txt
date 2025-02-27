@@ -1,0 +1,84 @@
+https://mermaid.ink/svg/Z3JhcGggVEQ7CglIZXJvLS0+IEdlbmVyYXRlX1RpdGxlOwoJU2V0dGluZy0tPiBHZW5lcmF0ZV9UaXRsZTsKCUdlbmVyYXRlX1RpdGxlLS0+IFN0b3J5OwoJU3Rvcnk7
+[02/27/25 19:30:24] INFO     PromptTask hero                                    
+                             Input: Name a fantasy hero (e.g., 'Eldric')        
+                    INFO     PromptTask setting                                 
+                             Input: Describe a mystical setting in a couple     
+                             sentences (e.g., 'the Shattered Isles')            
+[02/27/25 19:30:25] INFO     PromptTask hero                                    
+                             Output: Arinor Stormblade                          
+[02/27/25 19:30:26] INFO     PromptTask setting                                 
+                             Output: The Luminous Glade is a hidden realm where 
+                             twilight never fades, and the air shimmers with    
+                             ethereal light. Ancient trees with silver bark and 
+                             luminescent leaves form a canopy overhead, while   
+                             the ground is carpeted with bioluminescent moss    
+                             that pulses gently like a heartbeat. In the        
+                             distance, crystalline waterfalls cascade into pools
+                             of liquid starlight, and the soft hum of unseen    
+                             creatures fills the air, creating a symphony of    
+                             otherworldly sounds.                               
+                    INFO     PromptTask story                                   
+                             Input: Write a brief, yet heroic tale about Arinor 
+                             Stormblade the Brave of The Luminous Glade is a    
+                             hidden realm where twilight never fades, and the   
+                             air shimmers with ethereal light. Ancient trees    
+                             with silver bark and luminescent leaves form a     
+                             canopy overhead, while the ground is carpeted with 
+                             bioluminescent moss that pulses gently like a      
+                             heartbeat. In the distance, crystalline waterfalls 
+                             cascade into pools of liquid starlight, and the    
+                             soft hum of unseen creatures fills the air,        
+                             creating a symphony of otherworldly sounds..       
+[02/27/25 19:30:34] INFO     PromptTask story                                   
+                             Output: In the hidden realm of The Luminous Glade, 
+                             where twilight never fades and the air shimmers    
+                             with ethereal light, there lived a hero named      
+                             Arinor Stormblade the Brave. Arinor was known      
+                             throughout the realm for his courage and unwavering
+                             spirit. The Glade, with its ancient trees of silver
+                             bark and luminescent leaves, was a place of beauty 
+                             and mystery, but it was also a land in peril.      
+                                                                                
+                             One fateful evening, as the bioluminescent moss    
+                             pulsed gently beneath his feet, Arinor received a  
+                             vision from the Glade's guardian spirit. A shadow  
+                             had fallen over the crystalline waterfalls,        
+                             threatening to extinguish the pools of liquid      
+                             starlight and silence the symphony of otherworldly 
+                             sounds. The source of this darkness was a          
+                             malevolent sorcerer named Malakar, who sought to   
+                             harness the Glade's magic for his own sinister     
+                             purposes.                                          
+                                                                                
+                             Determined to protect his home, Arinor set out on a
+                             quest to confront Malakar. Armed with his legendary
+                             sword, Stormblade, which crackled with the power of
+                             the storm, he journeyed through the heart of the   
+                             Glade. Along the way, he encountered creatures of  
+                             light and shadow, each offering guidance and gifts 
+                             to aid him in his quest.                           
+                                                                                
+                             As Arinor approached the sorcerer's lair, the air  
+                             grew thick with dark magic. Undeterred, he pressed 
+                             on, his heart filled with the courage of the Glade 
+                             itself. In a climactic battle beneath the canopy of
+                             silver leaves, Arinor faced Malakar. The sorcerer's
+                             dark spells clashed with the radiant power of      
+                             Stormblade, illuminating the twilight realm in a   
+                             dazzling display of light and shadow.              
+                                                                                
+                             With a final, mighty strike, Arinor shattered      
+                             Malakar's staff, releasing the Glade from his      
+                             grasp. The darkness dissipated, and the waterfalls 
+                             once again cascaded with liquid starlight. The     
+                             creatures of the Glade sang a triumphant chorus,   
+                             their symphony echoing through the realm.          
+                                                                                
+                             Arinor Stormblade the Brave returned to his people,
+                             hailed as a hero. The Luminous Glade, its beauty   
+                             restored, continued to shimmer with ethereal light,
+                             a testament to the bravery of one who dared to     
+                             stand against the darkness. And so, the legend of  
+                             Arinor Stormblade lived on, inspiring future       
+                             generations to protect the magic and wonder of     
+                             their enchanted home.                              

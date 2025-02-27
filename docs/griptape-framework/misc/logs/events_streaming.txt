@@ -1,0 +1,9 @@
+<class 'griptape.events.start_structure_run_event.StartStructureRunEvent'>
+<class 'griptape.events.start_task_event.StartTaskEvent'>
+[02/27/25 19:30:35] INFO     PromptTask 2f7be2f1612d4b28ac33b2b9ac6a8862        
+                             Input: Hi!                                         
+<class 'griptape.events.start_prompt_event.StartPromptEvent'>
+[02/27/25 19:30:36] INFO     PromptTask 2f7be2f1612d4b28ac33b2b9ac6a8862        
+                             Output: Hello! How can I assist you today?         
+<class 'griptape.events.finish_prompt_event.FinishPromptEvent'>
+<class 'griptape.events.finish_task_event.FinishTaskEvent'>

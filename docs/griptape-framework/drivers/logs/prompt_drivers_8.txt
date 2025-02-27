@@ -1,0 +1,25 @@
+[02/27/25 19:28:30] INFO     PromptTask 93b2583f8f84467da085314645a55948        
+                             Input: Briefly explain how a computer works to a   
+                             young child.                                       
+[02/27/25 19:28:32] INFO     PromptTask 93b2583f8f84467da085314645a55948        
+                             Output: Imagine a computer is like a super-smart   
+                             robot that follows instructions!                   
+                                                                                
+                             You tell it what to do by clicking buttons or      
+                             typing on the keyboard. These are like giving the  
+                             robot a list of things to do.                      
+                                                                                
+                             Inside the computer is a tiny brain called the     
+                             "processor" that reads the list and figures out how
+                             to do everything.                                  
+                                                                                
+                             It also has a memory, like a notebook, where it can
+                             write down things it needs to remember.            
+                                                                                
+                             Finally, the screen is like a window where the     
+                             robot shows you what it's doing!                   
+                                                                                
+                             So, you give instructions, the brain figures it    
+                             out, the memory helps it remember, and the screen  
+                             shows you the results!                             
+                                                                                

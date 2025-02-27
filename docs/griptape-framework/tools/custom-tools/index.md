@@ -9,9 +9,16 @@ Each method in the class is decorated with an [activity](../../../reference/grip
 
 Here is a simple random number generator Tool:
 
-```python
---8<-- "docs/griptape-framework/tools/custom-tools/src/index_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/custom-tools/src/index_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/custom-tools/logs/index_2.txt"
+    ```
+
 
 Check out other [Griptape Tools](https://github.com/griptape-ai/griptape/tree/main/griptape/tools) to learn more about tool implementation details.
 

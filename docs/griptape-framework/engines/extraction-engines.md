@@ -13,9 +13,16 @@ As of now, Griptape supports two types of Extraction Engines: the CSV Extraction
 
 The CSV Extraction Engine extracts comma separated values from unstructured text.
 
-```python
---8<-- "docs/griptape-framework/engines/src/extraction_engines_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/engines/src/extraction_engines_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/engines/logs/extraction_engines_1.txt"
+    ```
+
 
 ```
 name,age,location
@@ -29,9 +36,16 @@ Collin,28,San Francisco
 
 The JSON Extraction Engine extracts JSON-formatted values from unstructured text.
 
-```python
---8<-- "docs/griptape-framework/engines/src/extraction_engines_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/engines/src/extraction_engines_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/engines/logs/extraction_engines_2.txt"
+    ```
+
 
 ```
 {

@@ -9,15 +9,29 @@ Prompt Drivers are used by Griptape Structures to make API calls to the underlyi
 
 You can instantiate drivers and pass them to structures:
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_1.txt"
+    ```
+
 
 Or use them independently:
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_2.txt"
+    ```
+
 
 You can pass images to the Driver if the model supports it:
 
@@ -68,9 +82,16 @@ Griptape offers the following Prompt Drivers for interacting with LLMs.
 The [OpenAiChatPromptDriver](../../reference/griptape/drivers/prompt/openai_chat_prompt_driver.md) connects to the [OpenAI Chat](https://platform.openai.com/docs/guides/chat) API.
 This driver uses [OpenAi function calling](https://platform.openai.com/docs/guides/function-calling) when using [Tools](../tools/index.md).
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_3.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_3.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_3.txt"
+    ```
+
 
 !!! info
 
@@ -89,9 +110,16 @@ For example, here is how we can connect to LMStudio's API:
 
 Or Groq's API:
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_groq.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_groq.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_groq.txt"
+    ```
+
 
 !!! tip
 
@@ -102,17 +130,31 @@ Or Groq's API:
 The [AzureOpenAiChatPromptDriver](../../reference/griptape/drivers/prompt/azure_openai_chat_prompt_driver.md) connects to Azure OpenAI [Chat Completion](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference) APIs.
 This driver uses [Azure OpenAi function calling](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/function-calling) when using [Tools](../tools/index.md).
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_5.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_5.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_5.txt"
+    ```
+
 
 ### Griptape Cloud
 
 The [GriptapeCloudPromptDriver](../../reference/griptape/drivers/prompt/griptape_cloud_prompt_driver.md) connects to the [Griptape Cloud](https://www.griptape.ai/cloud) chat messages API.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_griptape_cloud.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_griptape_cloud.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_griptape_cloud.txt"
+    ```
+
 
 ### Cohere
 
@@ -123,9 +165,16 @@ This driver uses [Cohere tool use](https://docs.cohere.com/docs/tools) when usin
 
     This driver requires the `drivers-prompt-cohere` [extra](../index.md#extras).
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_6.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_6.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_6.txt"
+    ```
+
 
 ### Anthropic
 
@@ -136,9 +185,16 @@ This driver uses [Cohere tool use](https://docs.cohere.com/docs/tools) when usin
 The [AnthropicPromptDriver](../../reference/griptape/drivers/prompt/anthropic_prompt_driver.md) connects to the Anthropic [Messages](https://docs.anthropic.com/claude/reference/messages_post) API.
 This driver uses [Anthropic tool use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) when using [Tools](../tools/index.md).
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_7.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_7.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_7.txt"
+    ```
+
 
 ### Google
 
@@ -149,9 +205,16 @@ This driver uses [Anthropic tool use](https://docs.anthropic.com/en/docs/build-w
 The [GooglePromptDriver](../../reference/griptape/drivers/prompt/google_prompt_driver.md) connects to the [Google Generative AI](https://ai.google.dev/tutorials/python_quickstart#generate_text_from_text_inputs) API.
 This driver uses [Gemini function calling](https://ai.google.dev/gemini-api/docs/function-calling) when using [Tools](../tools/index.md).
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_8.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_8.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_8.txt"
+    ```
+
 
 ### Amazon Bedrock
 
@@ -164,9 +227,16 @@ This driver uses [Bedrock tool use](https://docs.aws.amazon.com/bedrock/latest/u
 
 All models supported by the Converse API are available for use with this driver.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_9.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_9.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_9.txt"
+    ```
+
 
 ### Ollama
 
@@ -195,9 +265,16 @@ The [HuggingFaceHubPromptDriver](../../reference/griptape/drivers/prompt/hugging
     [Hugging Face serverless inference](https://huggingface.co/docs/api-inference/en/index) will not work with this driver.
     Due to the limitations of Hugging Face serverless inference, only models that are than 10GB are supported.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_11.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_11.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_11.txt"
+    ```
+
 
 #### Text Generation Interface
 
@@ -219,9 +296,16 @@ The [HuggingFacePipelinePromptDriver](../../reference/griptape/drivers/prompt/hu
 
     Running a model locally can be a computationally expensive process.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_13.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_13.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_13.txt"
+    ```
+
 
 ### Amazon SageMaker Jumpstart
 
@@ -243,6 +327,13 @@ If your model does not fit this use-case, we suggest sub-classing [AmazonSageMak
 
 The [GrokPromptDriver](../../reference/griptape/drivers/prompt/grok_prompt_driver.md) uses [Grok's chat completion](https://docs.x.ai/docs/api-reference#chat-completions) endpoint.
 
-```python
---8<-- "docs/griptape-framework/drivers/src/prompt_drivers_grok.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/drivers/src/prompt_drivers_grok.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/drivers/logs/prompt_drivers_grok.txt"
+    ```
+

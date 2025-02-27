@@ -1,0 +1,5 @@
+[02/27/25 19:28:41] INFO     PromptTask 039814333b4447b683596facb01e8782        
+                             Input: Hello!                                      
+                    INFO     PromptTask 039814333b4447b683596facb01e8782        
+                             Output: Hello! How can I assist you today?         
+{"type": "ConversationMemory", "runs": [{"type": "Run", "id": "2b5e70cea2744d1db9f4a2718929e37a", "meta": null, "input": {"type": "TextArtifact", "id": "4842b01190d54928be283f8482449883", "reference": null, "meta": {}, "name": "4842b01190d54928be283f8482449883", "value": "Hello!"}, "output": {"type": "TextArtifact", "id": "8b1573306a7c4251a5cccc80a20ce2ae", "reference": null, "meta": {"is_react_prompt": false}, "name": "8b1573306a7c4251a5cccc80a20ce2ae", "value": "Hello! How can I assist you today?"}}], "meta": {}, "max_runs": null}

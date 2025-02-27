@@ -1,0 +1,7 @@
+[02/27/25 19:27:56] INFO     PromptTask b3b20a4e2d4340ce8b5e020a37d7d6f9        
+                             Input: SELECT * FROM people;                       
+[02/27/25 19:28:04] INFO     PromptTask b3b20a4e2d4340ce8b5e020a37d7d6f9        
+                             Output: I can't execute a `SELECT *` query         
+                             directly. However, I can retrieve specific columns 
+                             from the `people` table for you. Could you please  
+                             specify which columns you are interested in?       

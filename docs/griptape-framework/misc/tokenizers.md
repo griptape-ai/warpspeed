@@ -14,50 +14,106 @@ Tokenizers are a low level abstraction that you will rarely interact with direct
 
 ### OpenAI
 
-```python
---8<-- "docs/griptape-framework/misc/src/tokenizers_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/misc/src/tokenizers_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/misc/logs/tokenizers_1.txt"
+    ```
+
 
 ### Cohere
 
-```python
---8<-- "docs/griptape-framework/misc/src/tokenizers_2.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/misc/src/tokenizers_2.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/misc/logs/tokenizers_2.txt"
+    ```
+
 
 ### Anthropic
 
-```python
---8<-- "docs/griptape-framework/misc/src/tokenizers_3.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/misc/src/tokenizers_3.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/misc/logs/tokenizers_3.txt"
+    ```
+
 
 ### Google
 
-```python
---8<-- "docs/griptape-framework/misc/src/tokenizers_4.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/misc/src/tokenizers_4.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/misc/logs/tokenizers_4.txt"
+    ```
+
 
 ### Hugging Face
 
-```python
---8<-- "docs/griptape-framework/misc/src/tokenizers_5.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/misc/src/tokenizers_5.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/misc/logs/tokenizers_5.txt"
+    ```
+
 
 ### Amazon Bedrock
 
-```python
---8<-- "docs/griptape-framework/misc/src/tokenizers_6.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/misc/src/tokenizers_6.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/misc/logs/tokenizers_6.txt"
+    ```
+
 
 ### Grok
 
-```python
---8<-- "docs/griptape-framework/misc/src/tokenizers_grok.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/misc/src/tokenizers_grok.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/misc/logs/tokenizers_grok.txt"
+    ```
+
 
 ### Simple
 
 Not all LLM providers have a public tokenizer API. In this case, you can use the `SimpleTokenizer` to count tokens based on a simple heuristic.
 
-```python
---8<-- "docs/griptape-framework/misc/src/tokenizers_7.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/misc/src/tokenizers_7.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/misc/logs/tokenizers_7.txt"
+    ```
+

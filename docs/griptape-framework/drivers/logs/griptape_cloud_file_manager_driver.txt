@@ -1,0 +1,2 @@
+# This is a test file for the GriptapeCloudFileManagerDriver integration tests.
+Successfully saved file at: buckets/b3590e77-8d4f-442c-81b6-cb22a0626a0e/assets/griptape_cloud_file_manager_driver_test_file.py

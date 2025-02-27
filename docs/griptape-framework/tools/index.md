@@ -23,9 +23,16 @@ When a function is decorated with `@activity`, the decorator injects keyword arg
 
 Here is an example of a custom tool for generating a random number:
 
-```python
---8<-- "docs/griptape-framework/tools/src/index_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/src/index_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/logs/index_1.txt"
+    ```
+
 
 ## Tool Output and Task Memory
 
@@ -37,9 +44,16 @@ Griptape provides a set of official tools for accessing and processing data. You
 
 Here is an example of a Pipeline using tools:
 
-```python
---8<-- "docs/griptape-framework/tools/src/index_1.py"
-```
+=== "Code"
+    ```python
+    --8<-- "docs/griptape-framework/tools/src/index_1.py"
+    ```
+
+=== "Logs"
+    ```text
+    --8<-- "docs/griptape-framework/tools/logs/index_1.txt"
+    ```
+
 
 ```
 [08/12/24 15:18:19] INFO     PromptTask 48ac0486e5374e1ea53e8d2b955e511f

@@ -1,0 +1,25 @@
+[02/27/25 19:23:40] INFO     PromptTask 2ae42c6ca6e14180a08b26d9137fc0fa        
+                             Input: Describe the weather in the image           
+                             tests/resources/mountain.png in one word.          
+[02/27/25 19:23:43] INFO     Subtask bec4c9b4b57a4a869cb955bb1f496292           
+                             Actions: [                                         
+                               {                                                
+                                 "tag": "call_DzWRV6j8xsFY1zCp7xU0UCFX",        
+                                 "name": "ImageQueryTool",                      
+                                 "path": "query_image_from_disk",               
+                                 "input": {                                     
+                                   "values": {                                  
+                                     "query": "Describe the weather in one      
+                             word.",                                            
+                                     "image_paths": [                           
+                                       "tests/resources/mountain.png"           
+                                     ]                                          
+                                   }                                            
+                                 }                                              
+                               }                                                
+                             ]                                                  
+[02/27/25 19:23:49] INFO     Subtask bec4c9b4b57a4a869cb955bb1f496292           
+                             Response: Serene                                   
+[02/27/25 19:23:50] INFO     PromptTask 2ae42c6ca6e14180a08b26d9137fc0fa        
+                             Output: The weather in the image is described as   
+                             "serene."                                          
