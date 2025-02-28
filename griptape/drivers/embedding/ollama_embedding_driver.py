@@ -24,7 +24,7 @@ class OllamaEmbeddingDriver(BaseEmbeddingDriver):
 
     model: str = field(kw_only=True, metadata={"serializable": True})
     host: Optional[str] = field(default=None, kw_only=True, metadata={"serializable": True})
-    _client: Client = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[Client] = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
 
     @lazy_property()
     def client(self) -> Client:

@@ -33,7 +33,7 @@ class QdrantVectorStoreDriver(BaseVectorStoreDriver):
         force_disable_check_same_thread: For QdrantLocal, force disable check_same_thread. Default: False Only use this if you can guarantee that you can resolve the thread safety outside QdrantClient.
         timeout: Timeout for REST and gRPC API requests. Default: 5 seconds for REST and unlimited for gRPC
         api_key: API key for authentication in Qdrant Cloud. Defaults: False
-        https: If true - use HTTPS(SSL) protocol. Default: None
+        https: If true - use HTTPS(SSL) protocol. Default: True
         prefix: Add prefix to the REST URL path. Example: service/v1 will result in Example: service/v1 will result in http://localhost:6333/service/v1/{qdrant-endpoint} for REST API. Defaults: None
         distance: The distance metric to be used for the vectors. Defaults: 'COSINE'.
         collection_name: The name of the Qdrant collection.
@@ -49,7 +49,7 @@ class QdrantVectorStoreDriver(BaseVectorStoreDriver):
     grpc_port: int = field(default=6334, kw_only=True, metadata={"serializable": True})
     prefer_grpc: bool = field(default=False, kw_only=True, metadata={"serializable": True})
     api_key: Optional[str] = field(default=None, kw_only=True, metadata={"serializable": True})
-    https: bool = field(default=None, kw_only=True, metadata={"serializable": True})
+    https: bool = field(default=True, kw_only=True, metadata={"serializable": True})
     prefix: Optional[str] = field(default=None, kw_only=True, metadata={"serializable": True})
     force_disable_check_same_thread: Optional[bool] = field(
         default=False,
@@ -61,7 +61,9 @@ class QdrantVectorStoreDriver(BaseVectorStoreDriver):
     collection_name: str = field(kw_only=True, metadata={"serializable": True})
     vector_name: Optional[str] = field(default=None, kw_only=True, metadata={"serializable": True})
     content_payload_key: str = field(default=CONTENT_PAYLOAD_KEY, kw_only=True, metadata={"serializable": True})
-    _client: QdrantClient = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[QdrantClient] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
 
     @lazy_property()
     def client(self) -> QdrantClient:

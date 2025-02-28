@@ -49,7 +49,7 @@ class EmailTool(BaseTool):
     imap_url: Optional[str] = field(default=None, kw_only=True)
     imap_user: Optional[str] = field(default=Factory(lambda self: self.username, takes_self=True), kw_only=True)
     imap_password: Optional[str] = field(default=Factory(lambda self: self.password, takes_self=True), kw_only=True)
-    mailboxes: dict[str, Optional[str]] = field(default=None, kw_only=True)
+    mailboxes: Optional[dict[str, Optional[str]]] = field(default=None, kw_only=True)
     email_loader: EmailLoader = field(
         default=Factory(
             lambda self: EmailLoader(imap_url=self.imap_url, username=self.imap_user, password=self.imap_password),

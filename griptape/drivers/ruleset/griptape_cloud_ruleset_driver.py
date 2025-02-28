@@ -31,7 +31,7 @@ class GriptapeCloudRulesetDriver(BaseRulesetDriver):
         ValueError: If `api_key` is not provided.
     """
 
-    ruleset_id: str = field(
+    ruleset_id: Optional[str] = field(
         default=None,
         metadata={"serializable": True},
     )

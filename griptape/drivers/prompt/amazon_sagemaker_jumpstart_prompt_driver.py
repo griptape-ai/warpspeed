@@ -43,7 +43,7 @@ class AmazonSageMakerJumpstartPromptDriver(BasePromptDriver):
     structured_output_strategy: StructuredOutputStrategy = field(
         default="rule", kw_only=True, metadata={"serializable": True}
     )
-    _client: Any = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[Any] = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
 
     @structured_output_strategy.validator  # pyright: ignore[reportAttributeAccessIssue, reportOptionalMemberAccess]
     def validate_structured_output_strategy(self, _: Attribute, value: str) -> str:
@@ -93,7 +93,7 @@ class AmazonSageMakerJumpstartPromptDriver(BasePromptDriver):
             generated_text = decoded_body["generated_text"]
 
         input_tokens = len(self.__prompt_stack_to_tokens(prompt_stack))
-        output_tokens = len(self.tokenizer.tokenizer.encode(generated_text))
+        output_tokens = len(self.tokenizer.tokenizer.encode(generated_text))  # pyright: ignore[reportArgumentType]
 
         return Message(
             content=[TextMessageContent(TextArtifact(generated_text))],
@@ -106,7 +106,7 @@ class AmazonSageMakerJumpstartPromptDriver(BasePromptDriver):
         raise NotImplementedError("streaming is not supported")
 
     def prompt_stack_to_string(self, prompt_stack: PromptStack) -> str:
-        return self.tokenizer.tokenizer.decode(self.__prompt_stack_to_tokens(prompt_stack))
+        return self.tokenizer.tokenizer.decode(self.__prompt_stack_to_tokens(prompt_stack))  # pyright: ignore[reportArgumentType]
 
     def _base_params(self, prompt_stack: PromptStack) -> dict:
         return {

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
 from attrs import Factory, define, field
 
@@ -29,7 +29,7 @@ class AmazonS3FileManagerDriver(BaseFileManagerDriver):
     session: boto3.Session = field(default=Factory(lambda: import_optional_dependency("boto3").Session()), kw_only=True)
     bucket: str = field(kw_only=True)
     _workdir: str = field(default="/", kw_only=True, alias="workdir")
-    _client: S3Client = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[S3Client] = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
 
     @property
     def workdir(self) -> str:

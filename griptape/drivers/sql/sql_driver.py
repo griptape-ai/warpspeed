@@ -17,7 +17,7 @@ if TYPE_CHECKING:
 class SqlDriver(BaseSqlDriver):
     engine_url: str = field(kw_only=True)
     create_engine_params: dict = field(factory=dict, kw_only=True)
-    _engine: Engine = field(default=None, kw_only=True, alias="engine", metadata={"serializable": False})
+    _engine: Optional[Engine] = field(default=None, kw_only=True, alias="engine", metadata={"serializable": False})
 
     @lazy_property()
     def engine(self) -> Engine:

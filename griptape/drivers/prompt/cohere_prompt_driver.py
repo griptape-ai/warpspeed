@@ -52,7 +52,7 @@ class CoherePromptDriver(BasePromptDriver):
     model: str = field(metadata={"serializable": True})
     force_single_step: bool = field(default=False, kw_only=True, metadata={"serializable": True})
     use_native_tools: bool = field(default=True, kw_only=True, metadata={"serializable": True})
-    _client: ClientV2 = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[ClientV2] = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
     tokenizer: BaseTokenizer = field(
         default=Factory(lambda self: CohereTokenizer(model=self.model, client=self.client), takes_self=True),
     )

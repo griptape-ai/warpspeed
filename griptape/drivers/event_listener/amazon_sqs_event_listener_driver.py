@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
 from attrs import Factory, define, field
 
@@ -18,7 +18,7 @@ if TYPE_CHECKING:
 class AmazonSqsEventListenerDriver(BaseEventListenerDriver):
     queue_url: str = field(kw_only=True)
     session: boto3.Session = field(default=Factory(lambda: import_optional_dependency("boto3").Session()), kw_only=True)
-    _client: SQSClient = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[SQSClient] = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
 
     @lazy_property()
     def client(self) -> SQSClient:

@@ -3,13 +3,14 @@ from __future__ import annotations
 import warnings
 from typing import TYPE_CHECKING, Callable, Optional, Union
 
-from attrs import Attribute, define, evolve, field, validators
+from attrs import Attribute, define, evolve, field
 
 from griptape.artifacts.text_artifact import TextArtifact
 from griptape.common import observable
 from griptape.configs import Defaults
 from griptape.structures import Structure
 from griptape.tasks import PromptTask
+from griptape.utils.decorators import lazy_property
 
 if TYPE_CHECKING:
     from pydantic import BaseModel
@@ -26,8 +27,8 @@ class Agent(Structure):
     input: Union[str, list, tuple, BaseArtifact, Callable[[BaseTask], BaseArtifact]] = field(
         default=lambda task: task.full_context["args"][0] if task.full_context["args"] else TextArtifact(value=""),
     )
-    stream: bool = field(default=None, kw_only=True)
-    prompt_driver: BasePromptDriver = field(default=None, kw_only=True)
+    _stream: Optional[bool] = field(default=None, kw_only=True, alias="stream")
+    _prompt_driver: Optional[BasePromptDriver] = field(default=None, kw_only=True, alias="prompt_driver")
     output_schema: Optional[Union[Schema, type[BaseModel]]] = field(default=None, kw_only=True)
     tools: list[BaseTool] = field(factory=list, kw_only=True)
     max_meta_memory_entries: Optional[int] = field(default=20, kw_only=True)
@@ -36,12 +37,20 @@ class Agent(Structure):
         factory=list, kw_only=True, alias="tasks", metadata={"serializable": True}
     )
 
+    @lazy_property()
+    def prompt_driver(self) -> BasePromptDriver:
+        return evolve(Defaults.drivers_config.prompt_driver, stream=self.stream)
+
+    @lazy_property()
+    def stream(self) -> bool:
+        return Defaults.drivers_config.prompt_driver.stream
+
     @fail_fast.validator  # pyright: ignore[reportAttributeAccessIssue]
     def validate_fail_fast(self, _: Attribute, fail_fast: bool) -> None:  # noqa: FBT001
         if fail_fast:
             raise ValueError("Agents cannot fail fast, as they can only have 1 task.")
 
-    @prompt_driver.validator  # pyright: ignore[reportAttributeAccessIssue, reportOptionalMemberAccess]
+    @_prompt_driver.validator  # pyright: ignore[reportAttributeAccessIssue, reportOptionalMemberAccess]
     def validate_prompt_driver(self, _: Attribute, prompt_driver: Optional[BasePromptDriver]) -> None:  # noqa: FBT001
         if prompt_driver is not None and self.stream is not None:
             warnings.warn(
@@ -90,14 +99,6 @@ class Agent(Structure):
         return self
 
     def _init_task(self) -> None:
-        if self.stream is None:
-            with validators.disabled():
-                self.stream = Defaults.drivers_config.prompt_driver.stream
-
-        if self.prompt_driver is None:
-            with validators.disabled():
-                self.prompt_driver = evolve(Defaults.drivers_config.prompt_driver, stream=self.stream)
-
         task = PromptTask(
             self.input,
             prompt_driver=self.prompt_driver,

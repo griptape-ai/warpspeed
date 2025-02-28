@@ -25,7 +25,7 @@ class AmazonDynamoDbConversationMemoryDriver(BaseConversationMemoryDriver):
     partition_key_value: str = field(kw_only=True, metadata={"serializable": True})
     sort_key: Optional[str] = field(default=None, metadata={"serializable": True})
     sort_key_value: Optional[str | int] = field(default=None, metadata={"serializable": True})
-    _table: Table = field(default=None, kw_only=True, alias="table", metadata={"serializable": False})
+    _table: Optional[Table] = field(default=None, kw_only=True, alias="table", metadata={"serializable": False})
 
     @lazy_property()
     def table(self) -> Table:

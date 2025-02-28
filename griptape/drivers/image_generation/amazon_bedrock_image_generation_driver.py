@@ -32,7 +32,9 @@ class AmazonBedrockImageGenerationDriver(BaseMultiModelImageGenerationDriver):
     image_width: int = field(default=512, kw_only=True, metadata={"serializable": True})
     image_height: int = field(default=512, kw_only=True, metadata={"serializable": True})
     seed: Optional[int] = field(default=None, kw_only=True, metadata={"serializable": True})
-    _client: BedrockClient = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[BedrockClient] = field(
+        default=None, kw_only=True, alias="client", metadata={"serializable": False}
+    )
 
     @lazy_property()
     def client(self) -> BedrockClient:

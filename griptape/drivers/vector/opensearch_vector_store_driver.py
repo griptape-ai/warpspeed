@@ -33,7 +33,7 @@ class OpenSearchVectorStoreDriver(BaseVectorStoreDriver):
     use_ssl: bool = field(default=True, kw_only=True, metadata={"serializable": True})
     verify_certs: bool = field(default=True, kw_only=True, metadata={"serializable": True})
     index_name: str = field(kw_only=True, metadata={"serializable": True})
-    _client: OpenSearch = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[OpenSearch] = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
 
     @lazy_property()
     def client(self) -> OpenSearch:

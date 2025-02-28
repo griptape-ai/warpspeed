@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import logging
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
 from attrs import Attribute, Factory, define, field
 
@@ -43,7 +43,7 @@ class HuggingFacePipelinePromptDriver(BasePromptDriver):
     structured_output_strategy: StructuredOutputStrategy = field(
         default="rule", kw_only=True, metadata={"serializable": True}
     )
-    _pipeline: TextGenerationPipeline = field(
+    _pipeline: Optional[TextGenerationPipeline] = field(
         default=None, kw_only=True, alias="pipeline", metadata={"serializable": False}
     )
 
@@ -82,7 +82,7 @@ class HuggingFacePipelinePromptDriver(BasePromptDriver):
                 generated_text = result[0]["generated_text"][-1]["content"]
 
                 input_tokens = len(self.__prompt_stack_to_tokens(prompt_stack))
-                output_tokens = len(self.tokenizer.tokenizer.encode(generated_text))
+                output_tokens = len(self.tokenizer.tokenizer.encode(generated_text))  # pyright: ignore[reportArgumentType]
 
                 return Message(
                     content=[TextMessageContent(TextArtifact(generated_text))],
@@ -99,7 +99,7 @@ class HuggingFacePipelinePromptDriver(BasePromptDriver):
         raise NotImplementedError("streaming is not supported")
 
     def prompt_stack_to_string(self, prompt_stack: PromptStack) -> str:
-        return self.tokenizer.tokenizer.decode(self.__prompt_stack_to_tokens(prompt_stack))
+        return self.tokenizer.tokenizer.decode(self.__prompt_stack_to_tokens(prompt_stack))  # pyright: ignore[reportArgumentType]
 
     def _base_params(self, prompt_stack: PromptStack) -> dict:
         return {

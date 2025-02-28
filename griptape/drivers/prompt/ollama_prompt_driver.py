@@ -72,7 +72,7 @@ class OllamaPromptDriver(BasePromptDriver):
         kw_only=True,
     )
     use_native_tools: bool = field(default=True, kw_only=True, metadata={"serializable": True})
-    _client: Client = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
+    _client: Optional[Client] = field(default=None, kw_only=True, alias="client", metadata={"serializable": False})
 
     @lazy_property()
     def client(self) -> Client:

@@ -22,7 +22,7 @@ class AmazonRedshiftSqlDriver(BaseSqlDriver):
     db_user: Optional[str] = field(default=None, kw_only=True)
     database_credentials_secret_arn: Optional[str] = field(default=None, kw_only=True)
     wait_for_query_completion_sec: float = field(default=0.3, kw_only=True)
-    _client: RedshiftDataAPIServiceClient = field(
+    _client: Optional[RedshiftDataAPIServiceClient] = field(
         default=None, kw_only=True, alias="client", metadata={"serializable": False}
     )
 
